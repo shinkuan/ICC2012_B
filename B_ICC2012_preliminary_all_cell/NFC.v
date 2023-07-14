@@ -18,12 +18,22 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     output F_WEN_B;
     input  F_RB_B;
 
+reg [3:0] state;
+
+
+localparam STATE_READ_COMMAND = 4'd0;
+localparam STATE_READ_ADDRESS = 4'd1;
+localparam STATE_READ_READING = 4'd2;
+
 
 always @(posedge clk) begin
     if (rst) begin
         
     end else begin
-        
+        case (state)
+            4'd0: 
+            default: 
+        endcase
     end
 end
 endmodule
