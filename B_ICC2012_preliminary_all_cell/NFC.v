@@ -29,6 +29,7 @@ reg [1:0] state_address;
 reg       state_command;
 
 
+
 //FSM States
 localparam STATE_READ_COMMAND = 4'd0;
 localparam STATE_READ_ADDRESS = 4'd1;
@@ -37,10 +38,9 @@ localparam STATE_READ_READING = 4'd2;
 localparam STATE_READ_COMMAND_0 = 1'b0;
 localparam STATE_READ_COMMAND_1 = 1'b1;
 
-localparam STATE_READ_ADDRESS_R = 2'd0;
-localparam STATE_READ_ADDRESS_0 = 2'd1;
-localparam STATE_READ_ADDRESS_1 = 2'd2;
-localparam STATE_READ_ADDRESS_2 = 2'd3;
+localparam STATE_READ_ADDRESS_0 = 2'd0;
+localparam STATE_READ_ADDRESS_1 = 2'd1;
+localparam STATE_READ_ADDRESS_2 = 2'd2;
 
 assign F_IO_A = F_IO_A_READING ? 8'hZZ : F_IO_A_OUT;
 assign F_IO_A = F_IO_A_IN;
@@ -54,15 +54,15 @@ always @(posedge clk) begin
         state_command <= STATE_READ_COMMAND_0;
         page    <= 0;
 
-        // F_CLE_A <= 0;
+        F_CLE_A <= 1;
         F_WEN_A <= 1;
-        // F_ALE_A <= 0;
+        F_ALE_A <= 0;
         F_REN_A <= 1;
     end else begin
         case (state)
             STATE_READ_COMMAND: begin
-                F_CLE_A <= 1;
-                F_ALE_A <= 0;
+                // F_CLE_A <= 1;
+                // F_ALE_A <= 0;
                 if (F_WEN_A) begin
                     F_WEN_A <= 0;
                     case (state_command)
@@ -87,18 +87,12 @@ always @(posedge clk) begin
                 if (F_WEN_A) begin
                     F_WEN_A <= 0;
                     case (state_address)
-                        // STATE_READ_ADDRESS_R: begin
-                        //     state_address <= STATE_READ_ADDRESS_0;
-                        // end
                         STATE_READ_ADDRESS_0: begin
                             state_address <= STATE_READ_ADDRESS_1;
                         end
                         STATE_READ_ADDRESS_1: begin
                             state_address <= STATE_READ_ADDRESS_2;
                         end
-                        // STATE_READ_ADDRESS_2: begin
-                        //     state_address <= STATE_READ_ADDRESS_R;
-                        // end
                         default: begin
                             
                         end
