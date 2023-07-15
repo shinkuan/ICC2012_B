@@ -1,15 +1,15 @@
-ftp±b¸¹(FTP number): 
+ftp å¸³è™Ÿ(FTP number): NA
 
-§¹¦¨¼ÒÀÀ¤§´ú¸Õ¼Ë¥»µ¥¯Å(level of test pattern):
+å®Œæˆæ¨¡æ“¬ä¹‹æ¸¬è©¦æ¨£æœ¬ç­‰ç´š(level of test pattern)ï¼šA
 
 --- RTL category---
-¨Ï¥Î¤§HDL¼ÒÀÀ¾¹¦WºÙ(HDL simulator ):  
-RTLÀÉ®×¦WºÙ(RTL filename):            
+ä½¿ç”¨ä¹‹ HDL æ¨¡æ“¬å™¨åç¨±(HDL simulator ): nc-verilog
+RTL æª”æ¡ˆåç¨±(RTL filename): NFC.v
 
 --- Pre-layout gate-level ---
-gate-levelÀÉ®×¦WºÙ(gate_level filename):   
-gate-level sdf filename:                   
-design compiler¦X¦¨¸ê®Æ®w(dc library):     
+gate-level æª”æ¡ˆåç¨±(gate_level filename): NFC_syn.v
+gate-level sdf filename: NFC_syn.sdf
+design compiler åˆæˆè³‡æ–™åº«(dc library): NA
 
------ª`·N¨Æ¶µ(annotation)--------------------------------------------------------
- (¨ä¾lª`·N¨Æ¶µ¨Ì¦U°ÑÁÉ¶¤¥îªº»İ¨D¶ñ¼g)
+-----æ³¨æ„äº‹é …(annotation)--------------------------------------------------------
+åŸ·è¡ŒPre-layout gate-levelçš„æ¨¡æ“¬æ™‚ï¼Œéœ€è¦æœ‰tsmc13.våœ¨è©²è³‡æ–™å¤¾ã€‚
