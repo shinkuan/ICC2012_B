@@ -33,10 +33,10 @@ NAND Flash Memory Controller
 
 ### __問題描述__
 
-　　請完成一快閃記憶體控制(NAND Flash Memory Control)電路設計。此控制電路的功能是將快閃記憶體 A 的資料完全複製至快閃記憶體 B。
-　　本控制電路有 4 只信號輸入(clk, rst, F_RB_A, F_RB_B)、9 只信號輸出(done,F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B)及 2 只記憶體雙向輸出入信號(F_IO_A, F_IO_B)，如圖 一所示，關於各輸入/輸出信號的功能說明，請參考表一。
-　　__本試題有使用到快閃記憶體模型(flash simulation model)，其中內含時序檢查，若要避免 RTL模擬時所産生的時序檢查錯誤(setup or hold violation)，可參考附錄 B 的第 4 點來進行模擬。__
-　　每個參賽隊伍必須根據下一節所給的設計規格完成計。參賽隊伍可藉由 CIC 所提供的輸入指令及正確結果檔來檢查設計是否有達到要求，詳情請參考附錄 B。
+　　請完成一快閃記憶體控制(NAND Flash Memory Control)電路設計。此控制電路的功能是將快閃記憶體 A 的資料完全複製至快閃記憶體 B。 <br>
+　　本控制電路有 4 只信號輸入(clk, rst, F_RB_A, F_RB_B)、9 只信號輸出(done,F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B)及 2 只記憶體雙向輸出入信號(F_IO_A, F_IO_B)，如圖 一所示，關於各輸入/輸出信號的功能說明，請參考表一。 <br>
+　　__本試題有使用到快閃記憶體模型(flash simulation model)，其中內含時序檢查，若要避免 RTL模擬時所産生的時序檢查錯誤(setup or hold violation)，可參考附錄 B 的第 4 點來進行模擬。__ <br>
+　　每個參賽隊伍必須根據下一節所給的設計規格完成計。參賽隊伍可藉由 CIC 所提供的輸入指令及正確結果檔來檢查設計是否有達到要求，詳情請參考附錄 B。 <br>
 
 ## Usage
 
