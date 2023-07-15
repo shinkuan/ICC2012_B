@@ -1,1 +1,16 @@
 /.vscode
+/_hdl_checker
+/B_ICC2012_preliminary_all_cell/nWaveLog
+/B_ICC2012_preliminary_all_cell/INCA_libs
+/B_ICC2012_preliminary_all_cell/alib-52
+/B_ICC2012_preliminary_all_cell/default.svf
+/B_ICC2012_preliminary_all_cell/command.log
+/B_ICC2012_preliminary_all_cell/filenames.log
+/B_ICC2012_preliminary_all_cell/ncverilog.history
+/B_ICC2012_preliminary_all_cell/ncverilog.key
+/B_ICC2012_preliminary_all_cell/ncverilog.log
+/B_ICC2012_preliminary_all_cell/NFC.fsdb
+/B_ICC2012_preliminary_all_cell/novas_dump.log
+/B_ICC2012_preliminary_all_cell/novas.rc
+/B_ICC2012_preliminary_all_cell/novas.conf
+/B_ICC2012_preliminary_all_cell/signal.rc
