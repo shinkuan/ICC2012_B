@@ -56,3 +56,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/shinkuan/ICC
 ## Authors
 
 * **Shinkuan** - [Shinkuan](https://github.com/shinkuan/)
+* **j20020420** - [j20020420](https://github.com/j20020420)
+* **rickhuang31** - [rickhuang31](https://github.com/rickhuang31)
