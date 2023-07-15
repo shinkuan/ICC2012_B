@@ -8,7 +8,7 @@
 NAND Flash Memory Controller
     <br/>
     <br/>
-    <a href="https://github.com/shinkuan/ICC2012_B"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell.pdf"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
     <a href="https://github.com/shinkuan/ICC2012_B/issues">Report Bug</a>
