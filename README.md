@@ -47,6 +47,7 @@ NAND Flash Memory Controller
 3. You can use [load.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/load.tcl) to load __NFC.v__ into __Design Vision__.  
 4. Load timing constrain for Flash using [set_timeviolation.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/set_timeviolation.tcl)  
 5. Provided a somple way to __report__ and __save__ result using [ReportAndSave.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/ReportAndSave.tcl)
+6. After synthesis, use `ncverilog testfixture.v ./Report/NFC_syn.v +define+p2+FSDB+SDF +access+r` to run post-syn simulation.
 
 ## License
 
