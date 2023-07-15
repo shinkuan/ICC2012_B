@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : NFC
 Version: P-2019.03
-Date   : Sat Jul 15 13:56:22 2023
+Date   : Sat Jul 15 14:12:40 2023
 ****************************************
 
 
@@ -26,12 +26,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  28.5680 uW   (95%)
-  Net Switching Power  =   1.3966 uW    (5%)
+  Cell Internal Power  =  28.2680 uW   (95%)
+  Net Switching Power  =   1.4400 uW    (5%)
                          ---------
-Total Dynamic Power    =  29.9647 uW  (100%)
+Total Dynamic Power    =  29.7080 uW  (100%)
 
-Cell Leakage Power     =   1.2140 uW
+Cell Leakage Power     =   1.1794 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -41,9 +41,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register       2.7595e-02        3.4314e-04        5.7226e+05        2.8511e-02  (  91.44%)
+register       2.7338e-02        6.0932e-04        5.7521e+05        2.8523e-02  (  92.34%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  9.7266e-04        1.0535e-03        6.4174e+05        2.6679e-03  (   8.56%)
+combinational  9.3000e-04        8.3069e-04        6.0417e+05        2.3649e-03  (   7.66%)
 --------------------------------------------------------------------------------------------------
-Total          2.8568e-02 mW     1.3966e-03 mW     1.2140e+06 pW     3.1179e-02 mW
+Total          2.8268e-02 mW     1.4400e-03 mW     1.1794e+06 pW     3.0887e-02 mW
 1
