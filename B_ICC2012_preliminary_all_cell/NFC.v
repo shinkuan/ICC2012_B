@@ -59,14 +59,14 @@ localparam STATE_READ_BUSYING_1 = 4'd11;
 
 always @(posedge clk) begin
     if (rst) begin
-        done <= 0;
+        done <= 1'b0;
 
-        F_IO_A_READING <= 0;
-        F_IO_B_READING <= 0;
+        F_IO_A_READING <= 1'b0;
+        F_IO_B_READING <= 1'b0;
 
         state   <= STATE_READ_COMMAND_0;
-        page    <= 0;
-        counter <= 0;
+        page    <= 9'd0;
+        counter <= 9'd0;
 
         /*=====A=====*/
         F_CLE_A <= 1;
