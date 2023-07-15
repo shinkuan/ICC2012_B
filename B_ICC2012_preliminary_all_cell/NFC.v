@@ -3,7 +3,6 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     input clk;
     input rst;
     output reg done;
-    output reg done;
 
     inout [7:0] F_IO_A;
     output reg F_CLE_A;
@@ -19,7 +18,6 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     output reg F_WEN_B;
     input  F_RB_B;
 
-/*========F_IO_A Tristate========*/
 /*========F_IO_A Tristate========*/
 wire [7:0] F_IO_A_IN;
 reg  [7:0] F_IO_A_OUT;
@@ -58,42 +56,18 @@ localparam STATE_READ_READING_1 = 4'd9;
 localparam STATE_READ_BUSYING_0 = 4'd10;
 localparam STATE_READ_BUSYING_1 = 4'd11;
 /*====================================*/
-reg [8:0] counter;  //Count 512.
-
-/*=============FSM States=============*/
-localparam STATE_READ_COMMAND_0 = 4'd0;
-localparam STATE_READ_COMMAND_1 = 4'd1;
-localparam STATE_READ_ADDRESS_0 = 4'd2;
-localparam STATE_READ_ADDRESS_1 = 4'd3;
-localparam STATE_READ_ADDRESS_2 = 4'd4;
-localparam STATE_READ_ADDRESS_3 = 4'd5;
-localparam STATE_READ_ADDRESS_4 = 4'd6;
-localparam STATE_READ_ADDRESS_5 = 4'd7;
-localparam STATE_READ_READING_0 = 4'd8;
-localparam STATE_READ_READING_1 = 4'd9;
-localparam STATE_READ_BUSYING_0 = 4'd10;
-localparam STATE_READ_BUSYING_1 = 4'd11;
-/*====================================*/
-
-
-
 
 always @(posedge clk) begin
     if (rst) begin
         done <= 0;
 
-        done <= 0;
-
         F_IO_A_READING <= 0;
         F_IO_B_READING <= 0;
-        F_IO_B_READING <= 0;
 
-        state   <= STATE_READ_COMMAND_0;
         state   <= STATE_READ_COMMAND_0;
         page    <= 0;
         counter <= 0;
-        /*=====A=====*/
-        counter <= 0;
+
         /*=====A=====*/
         F_CLE_A <= 1;
         F_WEN_A <= 0;
@@ -108,14 +82,7 @@ always @(posedge clk) begin
         F_ALE_B <= 0;
         F_REN_B <= 1;
         /*===========*/
-        /*===========*/
 
-        /*=====B=====*/
-        F_CLE_B <= 1;
-        F_WEN_B <= 0;
-        F_ALE_B <= 0;
-        F_REN_B <= 1;
-        /*===========*/
     end else begin
         case (state)
             STATE_READ_COMMAND_0: begin
@@ -323,12 +290,6 @@ always @(posedge clk) begin
 
                     state <= STATE_READ_COMMAND_0;
                 end else begin
-                    /*=====B=====*/
-                    F_CLE_B <= 0;
-                    F_WEN_B <= 1;
-                    F_ALE_B <= 0;
-                    F_REN_B <= 1;
-                    /*===========*/
                     /*=====B=====*/
                     F_CLE_B <= 0;
                     F_WEN_B <= 1;
