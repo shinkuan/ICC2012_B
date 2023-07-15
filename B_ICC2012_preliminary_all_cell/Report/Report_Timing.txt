@@ -1,0 +1,44 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : NFC
+Version: P-2019.03
+Date   : Sat Jul 15 13:56:22 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: F_IO_A[4] (input port clocked by clk)
+  Endpoint: F_IO_B[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  input external delay                     4.00      14.00 f
+  F_IO_A[4] (inout)                        0.00      14.00 f
+  U254/Y (OAI31XL)                         0.23      14.23 r
+  U293/Y (OAI21XL)                         0.12      14.34 f
+  F_IO_B_tri[4]/Y (TBUFXL)                 0.22      14.57 f
+  F_IO_B[4] (inout)                        0.00      14.57 f
+  data arrival time                                  14.57
+
+  clock clk (rise edge)                   30.00      30.00
+  clock network delay (ideal)              0.00      30.00
+  output external delay                   -2.00      28.00
+  data required time                                 28.00
+  -----------------------------------------------------------
+  data required time                                 28.00
+  data arrival time                                 -14.57
+  -----------------------------------------------------------
+  slack (MET)                                        13.43
+
+
+1

@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : NFC
+Version: P-2019.03
+Date   : Sat Jul 15 13:56:22 2023
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /mnt3/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  28.5680 uW   (95%)
+  Net Switching Power  =   1.3966 uW    (5%)
+                         ---------
+Total Dynamic Power    =  29.9647 uW  (100%)
+
+Cell Leakage Power     =   1.2140 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       2.7595e-02        3.4314e-04        5.7226e+05        2.8511e-02  (  91.44%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  9.7266e-04        1.0535e-03        6.4174e+05        2.6679e-03  (   8.56%)
+--------------------------------------------------------------------------------------------------
+Total          2.8568e-02 mW     1.3966e-03 mW     1.2140e+06 pW     3.1179e-02 mW
+1
