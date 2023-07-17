@@ -17,7 +17,7 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     output reg F_REN_B;
     output reg F_WEN_B;
     input  F_RB_B;
-
+ 
     /*========F_IO_A Tristate========*/
     wire [7:0] F_IO_A_IN;
     reg  [7:0] F_IO_A_OUT;
