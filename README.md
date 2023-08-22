@@ -19,7 +19,7 @@ NAND Flash Memory Controller
 
 ![Contributors](https://img.shields.io/github/contributors/shinkuan/ICC2012_B?color=dark-green) ![Issues](https://img.shields.io/github/issues/shinkuan/ICC2012_B) 
 
-## Table Of Contents
+## Table Of Content
 
 * [About the Project](#about-the-project)
 * [Usage](#usage)
