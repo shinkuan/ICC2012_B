@@ -56,7 +56,7 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     localparam STATE_READ_BUSYING_0 = 4'd10;
     localparam STATE_READ_BUSYING_1 = 4'd11;
     /*====================================*/
-
+    /* PY Party*/
     always @(posedge clk) begin
         if (rst) begin
             done <= 1'b0;
