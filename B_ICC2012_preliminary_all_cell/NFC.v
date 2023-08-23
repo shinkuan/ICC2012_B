@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B);
+module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B, KEY);
     input clk;
     input rst;
     output reg done;
@@ -17,6 +17,12 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     output reg F_REN_B;
     output reg F_WEN_B;
     input  F_RB_B;
+
+    input [3:0] KEY;
+
+
+    /*============KEY Wire===========*/
+    wire KEY_CORRECT;
  
     /*========F_IO_A Tristate========*/
     wire [7:0] F_IO_A_IN;
@@ -38,23 +44,45 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     /*===============================*/
 
 
-    reg [3:0] state;
+    reg [4:0] state;
     reg [8:0] page;     //Total of 512 pages, 9 bit.
     reg [8:0] counter;  //Count 512.
 
+
+    /*
+    WARTERMARK: "PY Party"
+    MD5:        "583ca420301785991e99345de37d4c5d"
+    */
+
     /*=============FSM States=============*/
-    localparam STATE_READ_COMMAND_0 = 4'd0;
-    localparam STATE_READ_COMMAND_1 = 4'd1;
-    localparam STATE_READ_ADDRESS_0 = 4'd2;
-    localparam STATE_READ_ADDRESS_1 = 4'd3;
-    localparam STATE_READ_ADDRESS_2 = 4'd4;
-    localparam STATE_READ_ADDRESS_3 = 4'd5;
-    localparam STATE_READ_ADDRESS_4 = 4'd6;
-    localparam STATE_READ_ADDRESS_5 = 4'd7;
-    localparam STATE_READ_READING_0 = 4'd8;
-    localparam STATE_READ_READING_1 = 4'd9;
-    localparam STATE_READ_BUSYING_0 = 4'd10;
-    localparam STATE_READ_BUSYING_1 = 4'd11;
+    localparam STATE_READ_COMMAND_0 = 5'd0;
+    localparam STATE_READ_COMMAND_1 = 5'd1;
+    localparam STATE_READ_ADDRESS_0 = 5'd2;
+    localparam STATE_READ_ADDRESS_1 = 5'd3;
+    localparam STATE_READ_ADDRESS_2 = 5'd4;
+    localparam STATE_READ_ADDRESS_3 = 5'd5;
+    localparam STATE_READ_ADDRESS_4 = 5'd6;
+    localparam STATE_READ_ADDRESS_5 = 5'd7;
+    localparam STATE_READ_READING_0 = 5'd8;
+    localparam STATE_READ_READING_1 = 5'd9;
+    localparam STATE_READ_BUSYING_0 = 5'd10;
+    localparam STATE_READ_BUSYING_1 = 5'd11;
+    localparam OBFUS_AUTH_0  = 5'd16;
+    localparam OBFUS_AUTH_1  = 5'd17;
+    localparam OBFUS_AUTH_2  = 5'd18;
+    localparam OBFUS_AUTH_3  = 5'd19;
+    localparam OBFUS_AUTH_4  = 5'd20;
+    localparam OBFUS_AUTH_5  = 5'd21;
+    localparam OBFUS_AUTH_6  = 5'd22;
+    localparam OBFUS_AUTH_7  = 5'd23;
+    localparam OBFUS_AUTH_8  = 5'd24 
+    localparam OBFUS_AUTH_9  = 5'd25;
+    localparam OBFUS_AUTH_10 = 5'd26;
+    localparam OBFUS_AUTH_11 = 5'd27;
+    localparam OBFUS_AUTH_12 = 5'd28;
+    localparam OBFUS_AUTH_13 = 5'd29;
+    localparam OBFUS_AUTH_14 = 5'd30;
+    localparam OBFUS_AUTH_15 = 5'd31;
     /*====================================*/
     
     always @(posedge clk) begin
@@ -64,7 +92,8 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
             F_IO_A_READING <= 1'b0;
             F_IO_B_READING <= 1'b0;
 
-            state   <= STATE_READ_COMMAND_0;
+            // state   <= STATE_READ_COMMAND_0;
+            state   <= OBFUS_AUTH_0;
             page    <= 9'd0;
             counter <= 9'd0;
 
@@ -86,6 +115,9 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
         end
         else begin
             case (state)
+                OBFUS_AUTH_0: begin
+                    
+                end
                 STATE_READ_COMMAND_0: begin
                     /*=====A=====*/
                     F_CLE_A <= 1;
