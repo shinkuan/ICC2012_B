@@ -99,37 +99,56 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     always @(posedge clk) begin
         if (rst) begin
             done <= 1'b0;
-
-            // F_IO_A_READING <= 1'b0;
-            // F_IO_B_READING <= 1'b0;
-
-            // state   <= STATE_READ_COMMAND_0;
             state   <= OBFUS_AUTH_0;
-            // page    <= 9'd0;
-            // counter <= 9'd0;
-
             WTMK_ACTIVE <= 0;
 
-            // /*=====A=====*/
-            // F_CLE_A <= 1;
-            // F_WEN_A <= 0;
-            // F_WEN_A <= 0;
-            // F_ALE_A <= 0;
-            // F_REN_A <= 1;
-            // /*===========*/
+            F_IO_A_READING <= 1'bX;
+            F_IO_B_READING <= 1'bX;
 
-            // /*=====B=====*/
-            // F_CLE_B <= 1;
-            // F_WEN_B <= 0;
-            // F_ALE_B <= 0;
-            // F_REN_B <= 1;
-            // /*===========*/
+            page    <= 9'bX;
+            counter <= 9'bX;
+
+            /*=====A=====*/
+            F_CLE_A <= 1'bX;
+            F_WEN_A <= 1'bX;
+            F_WEN_A <= 1'bX;
+            F_ALE_A <= 1'bX;
+            F_REN_A <= 1'bX;
+            /*===========*/
+
+            /*=====B=====*/
+            F_CLE_B <= 1'bX;
+            F_WEN_B <= 1'bX;
+            F_ALE_B <= 1'bX;
+            F_REN_B <= 1'bX;
+            /*===========*/
+            
 
         end
         else begin
             case (state)
                 /*Authentication Region*/
                 OBFUS_AUTH_0: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_0) begin  //P0
                         state <= OBFUS_AUTH_1;
                     end
@@ -138,6 +157,26 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                     end
                 end
                 OBFUS_AUTH_1: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_1) begin  //P1
                         state <= OBFUS_AUTH_2;
                     end
@@ -146,6 +185,26 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                     end
                 end
                 OBFUS_AUTH_2: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_2) begin  //Y0
                         state <= OBFUS_AUTH_3;
                     end
@@ -154,6 +213,26 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                     end
                 end
                 OBFUS_AUTH_3: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_3) begin  //Y1
                         state <= OBFUS_AUTH_4;
                     end
@@ -162,6 +241,26 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                     end
                 end
                 OBFUS_AUTH_4: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_4) begin  //P0
                         state <= OBFUS_AUTH_5;
                     end
@@ -170,6 +269,26 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                     end
                 end
                 OBFUS_AUTH_5: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_5) begin  //P1
                         state <= OBFUS_AUTH_6;
                     end
@@ -178,6 +297,26 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                     end
                 end
                 OBFUS_AUTH_6: begin
+                    F_IO_A_READING <= 1'bX;
+                    F_IO_B_READING <= 1'bX;
+
+                    page    <= 9'bX;
+                    counter <= 9'bX;
+
+                    /*=====A=====*/
+                    F_CLE_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_WEN_A <= 1'bX;
+                    F_ALE_A <= 1'bX;
+                    F_REN_A <= 1'bX;
+                    /*===========*/
+
+                    /*=====B=====*/
+                    F_CLE_B <= 1'bX;
+                    F_WEN_B <= 1'bX;
+                    F_ALE_B <= 1'bX;
+                    F_REN_B <= 1'bX;
+                    /*===========*/
                     if (KEY == OFSM_KEY_6) begin  //D0
                         state <= OBFUS_AUTH_7;
                     end
@@ -457,7 +596,7 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
 
 
     always @(*) begin
-        if (rst) begin
+        if (rst | (state == OBFUS_AUTH_7)) begin
             F_IO_A_OUT = 8'h00; //Here we use h00 instead of h01 is because we want to start at first half page.
             F_IO_B_OUT = 8'h80;
         end
