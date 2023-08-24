@@ -16,3 +16,6 @@
 /B_ICC2012_preliminary_all_cell/signal.rc
 /B_ICC2012_preliminary_all_cell/tsmc13.v
 /B_ICC2012_preliminary_all_cell/NFC_syn.sdf.X
+
+/B_ICC2012_preliminary_all_cell/synopsys_dc.setup
+/B_ICC2012_preliminary_all_cell/fsdb2vcdLog
