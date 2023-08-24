@@ -52,7 +52,11 @@ module test;
           .F_ALE_B(f_ale_b), 
           .F_REN_B(f_ren_b), 
           .F_WEN_B(f_wen_b), 
-          .F_RB_B(f_rb_b));
+          .F_RB_B(f_rb_b)
+          `ifdef KEY
+          ,.KEY(key)
+          `endif 
+          );
 
   flash_a fa(.IO7(f_io_a[7]), 
            .IO6(f_io_a[6]), 
@@ -123,21 +127,21 @@ module test;
       rst = 1'b0;
     `ifdef KEY
     #2
-    key = OFSM_KEY_0
+    key = OFSM_KEY_0;
     #20
-    key = OFSM_KEY_1
+    key = OFSM_KEY_1;
     #20
-    key = OFSM_KEY_2
+    key = OFSM_KEY_2;
     #20
-    key = OFSM_KEY_3
+    key = OFSM_KEY_3;
     #20
-    key = OFSM_KEY_4
+    key = OFSM_KEY_4;
     #20
-    key = OFSM_KEY_5
+    key = OFSM_KEY_5;
     #20
-    key = OFSM_KEY_6
+    key = OFSM_KEY_6;
     #20
-    key = OFSM_KEY_7
+    key = OFSM_KEY_7;
     `endif
   end
 
