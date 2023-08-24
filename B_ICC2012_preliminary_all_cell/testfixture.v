@@ -8,14 +8,16 @@
 `include "./flash_a.v"
 `include "./flash_b.v"
 
+`ifdef WARTERMARK
+  `define EXPECT "./wartermark_mem_goal.dat"
+`else
+  `ifdef p1
+    `define EXPECT "./p1_mem_goal.dat"
+  `endif
 
-
-`ifdef p1
-  `define EXPECT "./p1_mem_goal.dat"
-`endif
-
-`ifdef p2
-  `define EXPECT "./p2_mem_goal.dat"
+  `ifdef p2
+    `define EXPECT "./p2_mem_goal.dat"
+  `endif
 `endif
 
 
@@ -140,6 +142,24 @@ module test;
     key = OFSM_KEY_5;
     #20
     key = OFSM_KEY_6;
+    `ifdef WARTERMARK
+    #20
+    key = WTMK_KEY;
+    #20
+    key = OFSM_KEY_0;
+    #20
+    key = OFSM_KEY_1;
+    #20
+    key = OFSM_KEY_2;
+    #20
+    key = OFSM_KEY_3;
+    #20
+    key = OFSM_KEY_4;
+    #20
+    key = OFSM_KEY_5;
+    #20
+    key = OFSM_KEY_6;
+    `endif
     #20
     key = OFSM_KEY_7;
     `endif
@@ -150,13 +170,13 @@ module test;
 always @(posedge done) 
 begin
    for(k=0;k<262144;k=k+1)
-         if( fb.Mem[k] !== out_mem[k]) 
+    if( fb.Mem[k] !== out_mem[k]) 
 		begin
 			x=k/512;
          	$display("ERROR at page %d  address %h   :   output %h != expect %h",x , k, fb.Mem[k], out_mem[k]);
          	err = err + 1 ;
 		end 
-         else
+      else
 			begin
 			y=k%512;
 			x=k/512;
