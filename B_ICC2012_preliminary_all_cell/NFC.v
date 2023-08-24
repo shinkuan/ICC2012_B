@@ -22,7 +22,18 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
 
 
     /*============KEY Wire===========*/
+    localparam OFSM_KEY_0 = 4'h5;   //P
+    localparam OFSM_KEY_1 = 4'h0;
+    localparam OFSM_KEY_2 = 4'h5;   //Y
+    localparam OFSM_KEY_3 = 4'h9;
+    localparam OFSM_KEY_4 = 4'h5;   //P
+    localparam OFSM_KEY_5 = 4'h0;
+    localparam OFSM_KEY_6 = 4'h4;   //D
+    localparam OFSM_KEY_7 = 4'h4;
+    localparam WTMK_KEY = 4'b1111;
+    reg WTMK_ACTIVE;
     wire KEY_CORRECT;
+    wire KEY_WARTERMARK;
  
     /*========F_IO_A Tristate========*/
     wire [7:0] F_IO_A_IN;
@@ -75,49 +86,151 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     localparam OBFUS_AUTH_5  = 5'd21;
     localparam OBFUS_AUTH_6  = 5'd22;
     localparam OBFUS_AUTH_7  = 5'd23;
-    localparam OBFUS_AUTH_8  = 5'd24 
-    localparam OBFUS_AUTH_9  = 5'd25;
-    localparam OBFUS_AUTH_10 = 5'd26;
-    localparam OBFUS_AUTH_11 = 5'd27;
-    localparam OBFUS_AUTH_12 = 5'd28;
-    localparam OBFUS_AUTH_13 = 5'd29;
-    localparam OBFUS_AUTH_14 = 5'd30;
-    localparam OBFUS_AUTH_15 = 5'd31;
+    localparam OBFUS_DUMY_0  = 5'd24;
+    localparam OBFUS_DUMY_1  = 5'd25;
+    localparam OBFUS_DUMY_2  = 5'd26;
+    localparam OBFUS_DUMY_3  = 5'd27;
+    localparam OBFUS_DUMY_4  = 5'd28;
+    localparam OBFUS_DUMY_5  = 5'd29;
+    localparam OBFUS_DUMY_6  = 5'd30;
+    localparam OBFUS_DUMY_7  = 5'd31;
     /*====================================*/
     
     always @(posedge clk) begin
         if (rst) begin
             done <= 1'b0;
 
-            F_IO_A_READING <= 1'b0;
-            F_IO_B_READING <= 1'b0;
+            // F_IO_A_READING <= 1'b0;
+            // F_IO_B_READING <= 1'b0;
 
             // state   <= STATE_READ_COMMAND_0;
             state   <= OBFUS_AUTH_0;
-            page    <= 9'd0;
-            counter <= 9'd0;
+            // page    <= 9'd0;
+            // counter <= 9'd0;
 
-            /*=====A=====*/
-            F_CLE_A <= 1;
-            F_WEN_A <= 0;
-            F_WEN_A <= 0;
-            F_ALE_A <= 0;
-            F_REN_A <= 1;
-            /*===========*/
+            WTMK_ACTIVE <= 0;
 
-            /*=====B=====*/
-            F_CLE_B <= 1;
-            F_WEN_B <= 0;
-            F_ALE_B <= 0;
-            F_REN_B <= 1;
-            /*===========*/
+            // /*=====A=====*/
+            // F_CLE_A <= 1;
+            // F_WEN_A <= 0;
+            // F_WEN_A <= 0;
+            // F_ALE_A <= 0;
+            // F_REN_A <= 1;
+            // /*===========*/
+
+            // /*=====B=====*/
+            // F_CLE_B <= 1;
+            // F_WEN_B <= 0;
+            // F_ALE_B <= 0;
+            // F_REN_B <= 1;
+            // /*===========*/
 
         end
         else begin
             case (state)
+                /*Authentication Region*/
                 OBFUS_AUTH_0: begin
-                    
+                    if (KEY == OFSM_KEY_0) begin  //P0
+                        state <= OBFUS_AUTH_1;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
                 end
+                OBFUS_AUTH_1: begin
+                    if (KEY == OFSM_KEY_1) begin  //P1
+                        state <= OBFUS_AUTH_2;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
+                end
+                OBFUS_AUTH_2: begin
+                    if (KEY == OFSM_KEY_2) begin  //Y0
+                        state <= OBFUS_AUTH_3;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
+                end
+                OBFUS_AUTH_3: begin
+                    if (KEY == OFSM_KEY_3) begin  //Y1
+                        state <= OBFUS_AUTH_4;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
+                end
+                OBFUS_AUTH_4: begin
+                    if (KEY == OFSM_KEY_4) begin  //P0
+                        state <= OBFUS_AUTH_5;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
+                end
+                OBFUS_AUTH_5: begin
+                    if (KEY == OFSM_KEY_5) begin  //P1
+                        state <= OBFUS_AUTH_6;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
+                end
+                OBFUS_AUTH_6: begin
+                    if (KEY == OFSM_KEY_6) begin  //D0
+                        state <= OBFUS_AUTH_7;
+                    end
+                    else begin
+                        state <= OBFUS_DUMY_0;
+                    end
+                end
+                OBFUS_AUTH_7: begin
+                    if (KEY == OFSM_KEY_7) begin  //D1
+                        //Reset registers and enter normal region
+                        done <= 1'b0;
+
+                        F_IO_A_READING <= 1'b0;
+                        F_IO_B_READING <= 1'b0;
+
+                        state <= STATE_READ_COMMAND_0;
+                        page    <= 9'd0;
+                        counter <= 9'd0;
+
+                        /*=====A=====*/
+                        F_CLE_A <= 1;
+                        F_WEN_A <= 0;
+                        F_WEN_A <= 0;
+                        F_ALE_A <= 0;
+                        F_REN_A <= 1;
+                        /*===========*/
+
+                        /*=====B=====*/
+                        F_CLE_B <= 1;
+                        F_WEN_B <= 0;
+                        F_ALE_B <= 0;
+                        F_REN_B <= 1;
+                        /*===========*/
+                    end
+                    else begin
+                        if (KEY == WTMK_KEY) begin
+                            //Wartermark mode actived.
+                            state <= OBFUS_AUTH_0;
+                            WTMK_ACTIVE <= 1;
+                        end
+                        else begin
+                            state <= OBFUS_DUMY_0;
+                        end
+                    end
+                end
+                /*Dummy Region*/
+                OBFUS_DUMY_0: begin
+                    state <= OBFUS_DUMY_1;
+                end
+                OBFUS_DUMY_1: begin
+                    state <= OBFUS_DUMY_0;
+                end
+                /*Normal Region*/
                 STATE_READ_COMMAND_0: begin
                     /*=====A=====*/
                     F_CLE_A <= 1;

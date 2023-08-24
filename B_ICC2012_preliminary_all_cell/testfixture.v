@@ -27,6 +27,9 @@ module test;
   wire f_cle_a, f_ale_a, f_ren_a, f_wen_a, f_rb_a;
   wire [7:0] f_io_b;
   wire f_cle_b, f_ale_b, f_ren_b, f_wen_b, f_rb_b;
+  `ifdef KEY
+  reg [3:0] key;
+  `endif
   integer  out_mem [0:262143]; 
   
   reg [18:0] k;
@@ -95,15 +98,47 @@ module test;
     $readmemh (`EXPECT, out_mem);
   end
 
+    /*============KEY===========*/
+    localparam OFSM_KEY_0 = 4'h5;   //P
+    localparam OFSM_KEY_1 = 4'h0;
+    localparam OFSM_KEY_2 = 4'h5;   //Y
+    localparam OFSM_KEY_3 = 4'h9;
+    localparam OFSM_KEY_4 = 4'h5;   //P
+    localparam OFSM_KEY_5 = 4'h0;
+    localparam OFSM_KEY_6 = 4'h4;   //D
+    localparam OFSM_KEY_7 = 4'h4;
+    localparam WTMK_KEY = 4'b1111;
+
   initial begin
     clk = 1'b0;
     rst = 1'b0;
+    `ifdef KEY
+    key = 4'b0;
+    `endif
     n = 0;
     err = 0;
     #3
       rst = 1'b1;
     #15
       rst = 1'b0;
+    `ifdef KEY
+    #2
+    key = OFSM_KEY_0
+    #20
+    key = OFSM_KEY_1
+    #20
+    key = OFSM_KEY_2
+    #20
+    key = OFSM_KEY_3
+    #20
+    key = OFSM_KEY_4
+    #20
+    key = OFSM_KEY_5
+    #20
+    key = OFSM_KEY_6
+    #20
+    key = OFSM_KEY_7
+    `endif
   end
 
   always #duty clk = ~clk;
