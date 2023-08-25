@@ -23,11 +23,15 @@ module test;
 
   reg  clk, rst;
   wire done;
+  wire r1,r2;
   wire [7:0] f_io_a;
   wire f_cle_a, f_ale_a, f_ren_a, f_wen_a, f_rb_a;
   wire [7:0] f_io_b;
   wire f_cle_b, f_ale_b, f_ren_b, f_wen_b, f_rb_b;
   integer  out_mem [0:262143]; 
+  
+  wire TMR_error;
+  reg a_ctrl,b_ctrl,c_ctrl;
   
   reg [18:0] k;
   reg [8:0] x;
@@ -49,7 +53,11 @@ module test;
           .F_ALE_B(f_ale_b), 
           .F_REN_B(f_ren_b), 
           .F_WEN_B(f_wen_b), 
-          .F_RB_B(f_rb_b));
+          .F_RB_B(f_rb_b),
+		  .A_error_ctrl(a_ctrl),
+		  .B_error_ctrl(b_ctrl),
+		  .C_error_ctrl(c_ctrl),
+		  .TMR_error(TMR_error));
 
   flash_a fa(.IO7(f_io_a[7]), 
            .IO6(f_io_a[6]), 
@@ -96,6 +104,11 @@ module test;
   end
 
   initial begin
+  
+	a_ctrl=0;
+	b_ctrl=0;
+	c_ctrl=0;
+  
     clk = 1'b0;
     rst = 1'b0;
     n = 0;
@@ -104,6 +117,10 @@ module test;
       rst = 1'b1;
     #15
       rst = 1'b0;
+	  
+	//#50000 a_ctrl=1'b1;
+	//#50000 b_ctrl=1'b1;
+	//#3000 c_ctrl=1'b1;
   end
 
   always #duty clk = ~clk;
@@ -133,11 +150,17 @@ begin
 	if (err == 0)  begin
 	            $display("All data have been generated successfully!\n");
 	            $display("-------------------PASS-------------------\n");
+				
+				$display("TMR error=%b \n",TMR_error);
+				
 		    $finish;
 	         end
 	         else begin
 	            $display("There are %d errors!\n", err);
 	            $display("---------------------------------------------\n");
+				
+				$display("TMR error=%b \n",TMR_error);
+				
 		    $finish;
          	      end
 	
