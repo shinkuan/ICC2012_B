@@ -30,7 +30,7 @@ module test;
   wire [7:0] f_io_b;
   wire f_cle_b, f_ale_b, f_ren_b, f_wen_b, f_rb_b;
   `ifdef TMR
-  wire a_error_ctrl, b_error_ctrl, c_error_ctrl;
+  reg a_error_ctrl, b_error_ctrl, c_error_ctrl;
   `endif
   `ifdef KEY
   reg [3:0] key;
@@ -63,7 +63,7 @@ module test;
           `ifdef KEY
           ,.KEY(key)
           `endif
-          .A_ERROR_CTRL(a_error_ctrl),
+          ,.A_ERROR_CTRL(a_error_ctrl),
           .B_ERROR_CTRL(b_error_ctrl),
           .C_ERROR_CTRL(c_error_ctrl)
           );
