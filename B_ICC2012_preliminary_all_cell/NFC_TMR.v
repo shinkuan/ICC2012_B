@@ -2,10 +2,10 @@
 `include "./TMR_Simplex.v"
 
 `timescale 1ns/100ps
-module NFC_TMR(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B, A_error_ctrl, B_error_ctrl, C_error_ctrl, TMR_error);
+module NFC_TMR(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B, KEY, A_ERROR_CTRL, B_ERROR_CTRL, C_ERROR_CTRL, TMR_error);
 
 /*===============original_NFC_copy_A IO===============*/
-input A_error_ctrl,B_error_ctrl,C_error_ctrl;
+input A_ERROR_CTRL,B_ERROR_CTRL,C_ERROR_CTRL;
 output TMR_error;
 wire [26:0] data_A,data_B,data_C;
 wire [26:0] data_out;
@@ -142,7 +142,7 @@ assign data_A={OA_done, OA_F_IO_A_input, OA_F_CLE_A, OA_F_ALE_A, OA_F_REN_A, OA_
 assign data_B={OB_done, OB_F_IO_A_input, OB_F_CLE_A, OB_F_ALE_A, OB_F_REN_A, OB_F_WEN_A, OB_F_IO_B_input, OB_F_CLE_B, OB_F_ALE_B, OB_F_REN_B, OB_F_WEN_B, OB_F_IO_A_READING, OB_F_IO_B_READING};
 assign data_C={OC_done, OC_F_IO_A_input, OC_F_CLE_A, OC_F_ALE_A, OC_F_REN_A, OC_F_WEN_A, OC_F_IO_B_input, OC_F_CLE_B, OC_F_ALE_B, OC_F_REN_B, OC_F_WEN_B, OC_F_IO_A_READING, OC_F_IO_B_READING};
 
-TMR_Simplex TMR(data_out,TMR_error,data_A,data_B,data_C,A_error_ctrl,B_error_ctrl,C_error_ctrl,clk,rst);
+TMR_Simplex TMR(data_out,TMR_error,data_A,data_B,data_C,A_ERROR_CTRL,B_ERROR_CTRL,C_ERROR_CTRL,clk,rst);
 
 assign done=data_out[26];
 assign F_IO_A_output=data_out[25:18];
