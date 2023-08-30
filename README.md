@@ -21,11 +21,17 @@ NAND Flash Memory Controller
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
-* [Usage](#usage)
-* [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+- [Table Of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [__問題描述__](#問題描述)
+- [Usage](#usage)
+  - [Basic usage](#basic-usage)
+  - [Locking the circuit](#locking-the-circuit)
+  - [Wartermark](#wartermark)
+  - [TMR](#tmr)
+- [TODO](#todo)
+- [License](#license)
+- [Authors](#authors)
 
 ## About The Project
 
@@ -40,14 +46,84 @@ NAND Flash Memory Controller
 
 ## Usage
 
+### Basic usage
+
 1. cd into __B_ICC2012_preliminary_all_cell__ 
- `cd ./B_ICC2012_preliminary_all_cell/`  
-2. use __ncverilog__ to run testbench. You may choose `p1` or `p2`. __+FSDB__ to generate fsdb file.
-`ncverilog testfixture.v NFC.v +define+p1+FSDB +access+r`  
-3. You can use [load.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/load.tcl) to load __NFC.v__ into __Design Vision__.  
-4. Load timing constrain for Flash using [set_timeviolation.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/set_timeviolation.tcl)  
-5. Provided a simple way to __report__ and __save__ result using [ReportAndSave.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/ReportAndSave.tcl)
-6. After synthesis, use `ncverilog testfixture.v ./Report/NFC_syn.v +define+p2+FSDB+SDF +access+r` to run post-syn simulation.
+   - `cd ./B_ICC2012_preliminary_all_cell/`  
+1. use __ncverilog__ to run testbench. You may choose `p1` or `p2`. __+FSDB__ to generate fsdb file.
+   - `ncverilog testfixture.v NFC_ORIG.v +define+p1+FSDB +access+r`  
+2. You can use [load.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/load.tcl) to load __NFC.v__ into __Design Vision__.  
+3. Load timing constrain for Flash using [set_timeviolation.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/set_timeviolation.tcl)  
+4. Provided a simple way to __report__ and __save__ result using [ReportAndSave.tcl](https://github.com/shinkuan/ICC2012_B/blob/main/B_ICC2012_preliminary_all_cell/ReportAndSave.tcl)
+5. After synthesis, run post-syn simulation using:
+   - `ncverilog testfixture.v ./Report/NFC_syn.v +define+p2+FSDB+SDF +access+r`
+
+### Locking the circuit
+
+Basic idea:
+
+![Locking circuit](https://i.imgur.com/9ke5cyF.png)
+
+1. Define a `4bit * 8` KEY here.
+2. Define what key will testbench use here 
+3. Run testbench with `+KEY`.
+   - `ncverilog testfixture.v NFC.v +define+p1+FSDB+KEY +access+r` 
+4. To unlock the circuit, input the `4bit * 8` KEY in correct order.
+
+Example KEY in this repo is __PYPD__ in ascii (python 派對)
+
+### Wartermark
+
+When the circuit is in __wartermark mode__, it writes wartermark on to __NAND Flash Memory B__ repeatly.
+
+To enter __wartermark mode__, input the following to port `KEY` in sequence:
+ - `OFSM_KEY_0`~`OFSM_KEY_6`
+ - `WTMK_KEY`
+ - `OFSM_KEY_0`~`OFSM_KEY_7`
+
+How to use:
+
+1. Define the parameter:
+   1. Define a `8bit * 8` wartermark in NFC.v
+   2. Define `WTMK_KEY` in NFC.v
+   3. Also Define `WTMK_KEY` in testfixture.v
+2. Change data in wartermark_mem_goal.dat
+3. Run testbench with `+WARTERMARK`.
+   - `ncverilog testfixture.v NFC.v +define+p1+FSDB+KEY+WARTERMARK +access+r` 
+   - __`+KEY` must be used with `+WARTERMARK`__
+
+Example Wartermark in this repo is __PY party__ (python party)
+
+### TMR
+
+![TMR](https://i.imgur.com/brlOnR0.png)
+
+Added the following testing inputs:
+
+ - `A_ERROR_CTRL`
+ - `B_ERROR_CTRL`
+ - `C_ERROR_CTRL`
+
+When __error_ctrl input__ is __1__, the behavier of the module will give __wrong__ outputs.
+
+Added the following output ports:
+
+ - `TMR_ERROR`
+
+When __two or more__ modules gives wrong output, `TMR_ERROR` outputs 1
+
+1. Run testbench with `+TMR`.
+   - `ncverilog testfixture.v NFC_TMR.v +define+p1+FSDB+KEY+TMR +access+r`
+   - __NFC_TMR.v is based on NFC that has KEY function, so `+KEY` must be used either.__ 
+
+## TODO
+ - [x] Basic functions working
+ - [x] Locking Circuit
+ - [x] Obfuscated states
+ - [x] Wartermarking
+ - [x] TMR for reliability
+ - [ ] Design a more complex obfuscated states
+ - [ ] Calculate MTTF of the proposed TMR
 
 ## License
 
