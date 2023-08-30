@@ -1,3 +1,6 @@
+`include "./NFC.v"
+`include "./TMR_Simplex.v"
+
 `timescale 1ns/100ps
 module NFC_TMR(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B, A_error_ctrl, B_error_ctrl, C_error_ctrl, TMR_error);
 
@@ -32,6 +35,8 @@ input F_RB_B;
 
 wire F_IO_A_READING;
 wire F_IO_B_READING;
+
+input [3:0] KEY;
 
 /*===============original_NFC_copy_A IO===============*/
 wire OA_done;
@@ -129,9 +134,9 @@ assign F_IO_B=(F_IO_B_READING)? 8'hzz:F_IO_B_output;
 
 
 /*===============NFC_TMR IO connection===============*/
-original_NFC OriNFC_A(clk, rst, OA_done, OA_F_IO_A, OA_F_CLE_A, OA_F_ALE_A, OA_F_REN_A, OA_F_WEN_A, F_RB_A, OA_F_IO_B, OA_F_CLE_B, OA_F_ALE_B, OA_F_REN_B, OA_F_WEN_B, F_RB_B, OA_F_IO_A_READING, OA_F_IO_B_READING);
-original_NFC OriNFC_B(clk, rst, OB_done, OB_F_IO_A, OB_F_CLE_A, OB_F_ALE_A, OB_F_REN_A, OB_F_WEN_A, F_RB_A, OB_F_IO_B, OB_F_CLE_B, OB_F_ALE_B, OB_F_REN_B, OB_F_WEN_B, F_RB_B, OB_F_IO_A_READING, OB_F_IO_B_READING);
-original_NFC OriNFC_C(clk, rst, OC_done, OC_F_IO_A, OC_F_CLE_A, OC_F_ALE_A, OC_F_REN_A, OC_F_WEN_A, F_RB_A, OC_F_IO_B, OC_F_CLE_B, OC_F_ALE_B, OC_F_REN_B, OC_F_WEN_B, F_RB_B, OC_F_IO_A_READING, OC_F_IO_B_READING);
+NFC OriNFC_A(clk, rst, OA_done, OA_F_IO_A, OA_F_CLE_A, OA_F_ALE_A, OA_F_REN_A, OA_F_WEN_A, F_RB_A, OA_F_IO_B, OA_F_CLE_B, OA_F_ALE_B, OA_F_REN_B, OA_F_WEN_B, F_RB_B, OA_F_IO_A_READING, OA_F_IO_B_READING, KEY);
+NFC OriNFC_B(clk, rst, OB_done, OB_F_IO_A, OB_F_CLE_A, OB_F_ALE_A, OB_F_REN_A, OB_F_WEN_A, F_RB_A, OB_F_IO_B, OB_F_CLE_B, OB_F_ALE_B, OB_F_REN_B, OB_F_WEN_B, F_RB_B, OB_F_IO_A_READING, OB_F_IO_B_READING, KEY);
+NFC OriNFC_C(clk, rst, OC_done, OC_F_IO_A, OC_F_CLE_A, OC_F_ALE_A, OC_F_REN_A, OC_F_WEN_A, F_RB_A, OC_F_IO_B, OC_F_CLE_B, OC_F_ALE_B, OC_F_REN_B, OC_F_WEN_B, F_RB_B, OC_F_IO_A_READING, OC_F_IO_B_READING, KEY);
 
 assign data_A={OA_done, OA_F_IO_A_input, OA_F_CLE_A, OA_F_ALE_A, OA_F_REN_A, OA_F_WEN_A, OA_F_IO_B_input, OA_F_CLE_B, OA_F_ALE_B, OA_F_REN_B, OA_F_WEN_B, OA_F_IO_A_READING, OA_F_IO_B_READING};
 assign data_B={OB_done, OB_F_IO_A_input, OB_F_CLE_A, OB_F_ALE_A, OB_F_REN_A, OB_F_WEN_A, OB_F_IO_B_input, OB_F_CLE_B, OB_F_ALE_B, OB_F_REN_B, OB_F_WEN_B, OB_F_IO_A_READING, OB_F_IO_B_READING};
