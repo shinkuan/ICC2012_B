@@ -40,7 +40,9 @@ module test;
 
   parameter duty = `CYCLE / 2;
 
-  NFC top(.clk(clk), 
+  `ifdef TMR
+  NFC_TMR top(
+          .clk(clk), 
           .rst(rst), 
           .done(done),
           .F_IO_A(f_io_a), 
@@ -59,6 +61,29 @@ module test;
           ,.KEY(key)
           `endif 
           );
+  `else
+  NFC top(
+          .clk(clk), 
+          .rst(rst), 
+          .done(done),
+          .F_IO_A(f_io_a), 
+          .F_CLE_A(f_cle_a), 
+          .F_ALE_A(f_ale_a), 
+          .F_REN_A(f_ren_a), 
+          .F_WEN_A(f_wen_a), 
+          .F_RB_A(f_rb_a),
+          .F_IO_B(f_io_b), 
+          .F_CLE_B(f_cle_b), 
+          .F_ALE_B(f_ale_b), 
+          .F_REN_B(f_ren_b), 
+          .F_WEN_B(f_wen_b), 
+          .F_RB_B(f_rb_b)
+          `ifdef KEY
+          ,.KEY(key)
+          `endif 
+          );
+  `endif 
+          
 
   flash_a fa(.IO7(f_io_a[7]), 
            .IO6(f_io_a[6]), 
