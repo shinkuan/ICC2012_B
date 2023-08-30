@@ -29,6 +29,9 @@ module test;
   wire f_cle_a, f_ale_a, f_ren_a, f_wen_a, f_rb_a;
   wire [7:0] f_io_b;
   wire f_cle_b, f_ale_b, f_ren_b, f_wen_b, f_rb_b;
+  `ifdef TMR
+  wire a_error_ctrl, b_error_ctrl, c_error_ctrl;
+  `endif
   `ifdef KEY
   reg [3:0] key;
   `endif
@@ -59,7 +62,10 @@ module test;
           .F_RB_B(f_rb_b)
           `ifdef KEY
           ,.KEY(key)
-          `endif 
+          `endif
+          .A_ERROR_CTRL(a_error_ctrl),
+          .B_ERROR_CTRL(b_error_ctrl),
+          .C_ERROR_CTRL(c_error_ctrl)
           );
   `else
   NFC top(
@@ -145,6 +151,11 @@ module test;
     rst = 1'b0;
     `ifdef KEY
     key = 4'b0;
+    `endif
+    `ifdef TMR
+    a_error_ctrl = 1'b0;
+    b_error_ctrl = 1'b0;
+    c_error_ctrl = 1'b0;
     `endif
     n = 0;
     err = 0;
