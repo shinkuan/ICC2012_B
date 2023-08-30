@@ -31,6 +31,7 @@ module test;
   wire f_cle_b, f_ale_b, f_ren_b, f_wen_b, f_rb_b;
   `ifdef TMR
   reg a_error_ctrl, b_error_ctrl, c_error_ctrl;
+  wire tmr_error;
   `endif
   `ifdef KEY
   reg [3:0] key;
@@ -65,7 +66,8 @@ module test;
           `endif
           ,.A_ERROR_CTRL(a_error_ctrl),
           .B_ERROR_CTRL(b_error_ctrl),
-          .C_ERROR_CTRL(c_error_ctrl)
+          .C_ERROR_CTRL(c_error_ctrl),
+          .TMR_ERROR(tmr_error)
           );
   `else
   NFC top(
