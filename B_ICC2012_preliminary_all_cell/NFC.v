@@ -667,6 +667,7 @@ module NFC(clk, rst, done, F_IO_A_IN, F_IO_A_OUT, F_CLE_A, F_ALE_A, F_REN_A, F_W
                             endcase
                         end
                         else begin
+                            // This caused F_IO_B_OUT = 8'hXX 
                             F_IO_B_OUT = F_IO_A_IN;                            
                         end
                     end
