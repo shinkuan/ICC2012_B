@@ -7,14 +7,16 @@ Report : timing
         -sort_by group
 Design : NFC_TMR
 Version: P-2019.03
-Date   : Thu Sep  7 00:43:12 2023
+Date   : Sat Sep  9 12:58:29 2023
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: F_IO_A[0] (input port clocked by clk)
-  Endpoint: F_IO_A[0] (output port clocked by clk)
+  Startpoint: OriNFC_A/state_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: OriNFC_A/page_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
@@ -22,43 +24,30 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                   10.00      10.00
   clock network delay (ideal)              0.00      10.00
-  input external delay                     4.00      14.00 f
-  F_IO_A[0] (inout)                        0.00      14.00 f
-  OA_F_IO_A_tri[0]/Y (TBUFXL)              0.39      14.39 f
-  OriNFC_A/F_IO_A[0] (NFC_0)               0.00      14.39 f
-  OriNFC_A/U60/Y (AOI32X1)                 0.20      14.59 r
-  OriNFC_A/U59/Y (NAND3BX1)                0.10      14.69 f
-  OriNFC_A/F_IO_B_tri[0]/Y (TBUFXL)        0.31      15.00 f
-  OriNFC_A/F_IO_B[0] (NFC_0)               0.00      15.00 f
-  TMR/dataA_in[6] (TMR_Simplex)            0.00      15.00 f
-  TMR/U115/Y (NOR2X1)                      0.17      15.17 r
-  TMR/U40/Y (XNOR2X1)                      0.19      15.36 f
-  TMR/U99/Y (NAND4X1)                      0.16      15.52 r
-  TMR/U20/Y (NOR4X1)                       0.08      15.60 f
-  TMR/U17/Y (NAND4X1)                      0.18      15.78 r
-  TMR/U7/Y (NAND2X1)                       0.12      15.90 f
-  TMR/U5/Y (CLKINVX1)                      0.07      15.97 r
-  TMR/U29/Y (OAI2BB1X1)                    0.16      16.12 r
-  TMR/U8/Y (CLKINVX1)                      0.07      16.20 f
-  TMR/U3/Y (OAI21XL)                       0.54      16.74 r
-  TMR/U12/Y (CLKINVX1)                     0.47      17.21 f
-  TMR/U133/Y (AOI222XL)                    0.43      17.65 r
-  TMR/U132/Y (CLKINVX1)                    0.10      17.74 f
-  TMR/data_out[1] (TMR_Simplex)            0.00      17.74 f
-  U11/Y (CLKINVX1)                         0.12      17.87 r
-  F_IO_A_tri[0]/Y (TBUFXL)                 0.24      18.10 f
-  F_IO_A[0] (inout)                        0.00      18.10 f
-  data arrival time                                  18.10
+  OriNFC_A/state_reg[4]/CK (DFFQX1)        0.00      10.00 r
+  OriNFC_A/state_reg[4]/Q (DFFQX1)         0.57      10.57 r
+  OriNFC_A/U100/Y (CLKINVX1)               0.25      10.81 f
+  OriNFC_A/U22/Y (NAND2X1)                 0.20      11.01 r
+  OriNFC_A/U12/Y (CLKINVX1)                0.15      11.17 f
+  OriNFC_A/U112/Y (NAND2X1)                0.16      11.33 r
+  OriNFC_A/U25/Y (NOR2X1)                  0.11      11.45 f
+  OriNFC_A/U20/Y (CLKINVX1)                0.05      11.49 r
+  OriNFC_A/U19/Y (OA21XL)                  0.35      11.85 r
+  OriNFC_A/U23/Y (NOR2X1)                  0.17      12.02 f
+  OriNFC_A/U135/Y (AO22X1)                 0.34      12.36 f
+  OriNFC_A/page_reg[0]/D (DFFQX1)          0.00      12.36 f
+  data arrival time                                  12.36
 
   clock clk (rise edge)                   30.00      30.00
   clock network delay (ideal)              0.00      30.00
-  output external delay                   -2.00      28.00
-  data required time                                 28.00
+  OriNFC_A/page_reg[0]/CK (DFFQX1)         0.00      30.00 r
+  library setup time                      -0.26      29.74
+  data required time                                 29.74
   -----------------------------------------------------------
-  data required time                                 28.00
-  data arrival time                                 -18.10
+  data required time                                 29.74
+  data arrival time                                 -12.36
   -----------------------------------------------------------
-  slack (MET)                                         9.90
+  slack (MET)                                        17.39
 
 
 1
