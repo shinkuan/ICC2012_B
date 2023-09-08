@@ -31,8 +31,8 @@ module test;
   wire [7:0] f_io_b;
   wire f_cle_b, f_ale_b, f_ren_b, f_wen_b, f_rb_b;
   `ifdef TMR
-  reg a_error_ctrl, b_error_ctrl, c_error_ctrl;
-  wire tmr_error;
+  // reg a_error_ctrl, b_error_ctrl, c_error_ctrl;
+  // wire tmr_error;
   `endif
   `ifdef KEY
   reg [3:0] key;
@@ -65,10 +65,10 @@ module test;
           `ifdef KEY
           ,.KEY(key)
           `endif
-          ,.A_ERROR_CTRL(a_error_ctrl),
-          .B_ERROR_CTRL(b_error_ctrl),
-          .C_ERROR_CTRL(c_error_ctrl),
-          .TMR_ERROR(tmr_error)
+          // ,.A_ERROR_CTRL(a_error_ctrl),
+          // .B_ERROR_CTRL(b_error_ctrl),
+          // .C_ERROR_CTRL(c_error_ctrl),
+          // .TMR_ERROR(tmr_error)
           );
   `else
   NFC top(
@@ -160,9 +160,9 @@ module test;
     key = 4'b0;
     `endif
     `ifdef TMR
-    a_error_ctrl = 1'b0;
-    b_error_ctrl = 1'b0;
-    c_error_ctrl = 1'b0;
+    // a_error_ctrl = 1'b0;
+    // b_error_ctrl = 1'b0;
+    // c_error_ctrl = 1'b0;
     `endif
     n = 0;
     err = 0;
@@ -240,14 +240,12 @@ begin
 	if (err == 0)  begin
 	            $display("All data have been generated successfully!\n");
 	            $display("-------------------PASS-------------------\n");
-				$display("TMR_ERROR= %b \n",tmr_error);
-		    $finish;
+		          $finish;
 	         end
 	         else begin
 	            $display("There are %d errors!\n", err);
 	            $display("---------------------------------------------\n");
-				$display("TMR_ERROR= %b \n",tmr_error);
-		    $finish;
+		          $finish;
          	      end
 	
 	end
