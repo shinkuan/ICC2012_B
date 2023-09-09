@@ -206,6 +206,11 @@ module test;
     #20
     key = OFSM_KEY_7;
     `endif
+	
+	//#500000 a_error_ctrl=1'b1;
+	//#500000 b_error_ctrl=1'b1;
+	//#500000 c_error_ctrl=1'b1;
+	
   end
 
   always #duty clk = ~clk;
@@ -235,11 +240,13 @@ begin
 	if (err == 0)  begin
 	            $display("All data have been generated successfully!\n");
 	            $display("-------------------PASS-------------------\n");
+				$display("TMR_ERROR= %b \n",tmr_error);
 		    $finish;
 	         end
 	         else begin
 	            $display("There are %d errors!\n", err);
 	            $display("---------------------------------------------\n");
+				$display("TMR_ERROR= %b \n",tmr_error);
 		    $finish;
          	      end
 	

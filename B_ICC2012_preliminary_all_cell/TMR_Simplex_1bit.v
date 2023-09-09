@@ -1,22 +1,21 @@
 `timescale 1ns/100ps
-module TMR_Simplex(data_out,TMR_error,dataA_in,dataB_in,dataC_in,A_error_ctrl,B_error_ctrl,C_error_ctrl,clk,reset);
+module TMR_Simplex_1bit(data_out,TMR_error,dataA_in,dataB_in,dataC_in,A_error_ctrl,B_error_ctrl,C_error_ctrl,clk,reset);
 
-parameter DATA_LEN=5'd27;
-input [DATA_LEN-1'b1:0]dataA_in,dataB_in,dataC_in;
+input dataA_in,dataB_in,dataC_in;
 input A_error_ctrl,B_error_ctrl,C_error_ctrl;
 input clk,reset;
 
-output reg [DATA_LEN-1'b1:0]data_out;
+output reg data_out;
 output reg TMR_error;
 
-wire [DATA_LEN-1'b1:0]_A,_B,_C;
+wire _A,_B,_C;
 
 reg A_fault,B_fault,C_fault;
 wire simplex_mode;
 
-assign _A=(A_error_ctrl)? {dataA_in[26:14],8'h55,dataA_in[5:0]}: dataA_in;
-assign _B=(B_error_ctrl)? {dataB_in[26:14],8'h54,dataB_in[5:0]}: dataB_in;
-assign _C=(C_error_ctrl)? {dataC_in[26:14],8'h87,dataC_in[5:0]}: dataC_in;
+assign _A=(A_error_ctrl)? ~dataA_in : dataA_in;
+assign _B=(B_error_ctrl)? ~dataB_in : dataB_in;
+assign _C=(C_error_ctrl)? ~dataC_in : dataC_in;
 
 assign simplex_mode=A_fault|B_fault|C_fault;
 
@@ -41,28 +40,28 @@ begin
 	else
 		if((_A!=_B)&&(_A!=_C)&&(_B!=_C))
 		begin
-			data_out=_A;
+			data_out=(_A&_B)|(_B&_C)|(_A&_C);
 			TMR_error=1'b1;
 		end
 		else if((_A!=_B)&&(_A!=_C))
 		begin
-			data_out=_B;
+			data_out=(_A&_B)|(_B&_C)|(_A&_C);
 			TMR_error=1'b0;
 		end
-		else if((_A!=_B)&&(_B!=_C))
+		else if((_A!=_C)&&(_B!=_C))
 		begin
-			data_out=_C;
+			data_out=(_A&_B)|(_B&_C)|(_A&_C);
 			TMR_error=1'b0;
 		end
 		else 
 		begin
-			data_out=_A;
+			data_out=(_A&_B)|(_B&_C)|(_A&_C);
 			TMR_error=1'b0;
 		end
 	
 end
 
-always@(posedge clk or posedge reset)
+always@(posedge clk)
 begin
 	if(reset)
 		begin

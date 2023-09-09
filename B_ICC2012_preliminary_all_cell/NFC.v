@@ -1,10 +1,10 @@
 `timescale 1ns/100ps
-module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B, F_IO_A_READING, F_IO_B_READING, KEY);
+module NFC(clk, rst, done, F_IO_A_IN, F_IO_A_OUT, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F_IO_B_IN, F_IO_B_OUT, F_CLE_B, F_ALE_B, F_REN_B, F_WEN_B, F_RB_B, F_IO_A_READING, F_IO_B_READING, KEY);
     input clk;
     input rst;
     output reg done;
 
-    inout [7:0] F_IO_A;
+    //inout [7:0] F_IO_A;
     output reg F_CLE_A;
     output reg F_ALE_A;
     output reg F_REN_A;
@@ -12,7 +12,7 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     output reg F_IO_A_READING;
     input  F_RB_A;
 
-    inout [7:0] F_IO_B;
+    //inout [7:0] F_IO_B;
     output reg F_CLE_B;
     output reg F_ALE_B;
     output reg F_REN_B;
@@ -38,19 +38,19 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
     wire KEY_WARTERMARK;
  
     /*========F_IO_A Tristate========*/
-    wire [7:0] F_IO_A_IN;
-    reg  [7:0] F_IO_A_OUT;
+    input [7:0] F_IO_A_IN;
+    output reg  [7:0] F_IO_A_OUT;
 
-    assign F_IO_A = F_IO_A_READING ? 8'hZZ : F_IO_A_OUT;
+    //assign F_IO_A = F_IO_A_READING ? 8'hZZ : F_IO_A_OUT;
     // assign F_IO_A_IN = F_IO_A;
     /*===============================*/
 
 
     /*========F_IO_B Tristate========*/
-    wire [7:0] F_IO_B_IN;
-    reg  [7:0] F_IO_B_OUT;
+    input [7:0] F_IO_B_IN;
+    output reg  [7:0] F_IO_B_OUT;
 
-    assign F_IO_B = F_IO_B_READING ? 8'hZZ : F_IO_B_OUT;
+    //assign F_IO_B = F_IO_B_READING ? 8'hZZ : F_IO_B_OUT;
     // assign F_IO_B_IN = F_IO_B;
     /*===============================*/
 
@@ -667,7 +667,7 @@ module NFC(clk, rst, done, F_IO_A, F_CLE_A, F_ALE_A, F_REN_A, F_WEN_A, F_RB_A, F
                             endcase
                         end
                         else begin
-                            F_IO_B_OUT = F_IO_A;                            
+                            F_IO_B_OUT = F_IO_A_IN;                            
                         end
                     end
                 end
