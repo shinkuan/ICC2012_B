@@ -2,6 +2,7 @@
 
 `define CYCLE 20
 `define SDFFILE  "./Report/NFC_syn.sdf"
+`define SDFFILE_TMR  "./Report_TMR/NFC_syn.sdf"
 `ifdef SDF
 `include "./tsmc13.v"
 `endif
@@ -131,7 +132,11 @@ module test;
     `endif
 
     `ifdef SDF
-      $sdf_annotate(`SDFFILE, top);
+      `ifdef TMR
+        $sdf_annotate(`SDFFILE_TMR, top);
+      `else
+        $sdf_annotate(`SDFFILE, top);
+      `endif 
     `endif
 
     $readmemh (`EXPECT, out_mem);
