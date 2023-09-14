@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : NFC_TMR
+Version: P-2019.03
+Date   : Thu Sep 14 23:42:39 2023
+****************************************
+
+Operating Conditions: BCCOM   Library: fsa0m_a_generic_core_ff1p98vm40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: F_IO_A[5] (input port clocked by clk)
+  Endpoint: F_IO_B[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  NFC_TMR            enG5K                 fsa0m_a_generic_core_ff1p98vm40c
+  NFC_2              enG5K                 fsa0m_a_generic_core_ff1p98vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             1.00      11.00
+  input external delay                                    1.00      12.00 f
+  F_IO_A[5] (inout)                                       1.04      13.04 f
+  OriNFC_B/F_IO_A_IN[5] (NFC_2)                           0.00      13.04 f
+  OriNFC_B/U114/O (AOI22S)                                0.26      13.30 r
+  OriNFC_B/U113/O (OA22)                                  0.13      13.44 r
+  OriNFC_B/U32/O (NR2)                                    0.04      13.48 f
+  OriNFC_B/F_IO_B_OUT[5] (NFC_2)                          0.00      13.48 f
+  TMR_F_IO_B_OUT/dataB_in[5] (TMR_8bit_1)                 0.00      13.48 f
+  TMR_F_IO_B_OUT/U3/O (MAO222)                            0.12      13.60 f
+  TMR_F_IO_B_OUT/data_out[5] (TMR_8bit_1)                 0.00      13.60 f
+  U25/O (INV1S)                                           0.04      13.63 r
+  F_IO_B_tri[5]/O (INVT4)                                 0.36      13.99 f
+  F_IO_B[5] (inout)                                       0.00      13.99 f
+  data arrival time                                                 13.99
+
+  clock clk (rise edge)                                  30.00      30.00
+  clock network delay (ideal)                             1.00      31.00
+  output external delay                                  -1.00      30.00
+  data required time                                                30.00
+  --------------------------------------------------------------------------
+  data required time                                                30.00
+  data arrival time                                                -13.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                       16.01
+
+
+1

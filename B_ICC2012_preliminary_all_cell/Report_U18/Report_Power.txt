@@ -1,0 +1,75 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : NFC_TMR
+Version: P-2019.03
+Date   : Thu Sep 14 23:42:39 2023
+****************************************
+
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ff1p98vm40c (File: /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db)
+
+
+Operating Conditions: BCCOM   Library: fsa0m_a_generic_core_ff1p98vm40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+NFC_TMR                enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_0                  enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_0             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_8bit_0             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_1                  enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_2                  enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_1             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_2             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_3             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_4             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_5             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_6             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_7             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_8             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_9             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_1bit_10            enG5K             fsa0m_a_generic_core_ff1p98vm40c
+TMR_8bit_1             enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_1_DW01_inc_0       enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_1_DW01_inc_1       enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_2_DW01_inc_0       enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_2_DW01_inc_1       enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_0_DW01_inc_0       enG5K             fsa0m_a_generic_core_ff1p98vm40c
+NFC_0_DW01_inc_1       enG5K             fsa0m_a_generic_core_ff1p98vm40c
+
+
+Global Operating Voltage = 1.98 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 374.7729 uW   (68%)
+  Net Switching Power  = 175.3712 uW   (32%)
+                         ---------
+Total Dynamic Power    = 550.1442 uW  (100%)
+
+Cell Leakage Power     =  29.2780 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.3186        6.7720e-03        1.0453e+04            0.3254  (  62.08%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  5.6162e-02            0.1425        1.8825e+04            0.1987  (  37.92%)
+--------------------------------------------------------------------------------------------------
+Total              0.3748 mW         0.1493 mW     2.9278e+04 pW         0.5241 mW
+1
