@@ -1,0 +1,58 @@
+# PPCMD 1 
+# sroute -connect { padPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+# 3 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal5 bottom metal5 left metal4 right metal4} -width {top 8 bottom 8 left 8 right 8} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 4 -use_interleaving_wire_group 1
+# 2 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VCC 8000 5 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 650070 226440 650070 243000 650070 259560 650070 276120 650070 1019960 650070 1036520 650070 1053080 650070 1069640 
+# END_RING_PT_INFO_LIST 
+# VCC 8000 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 226400 648040 242960 648040 259520 648040 276080 648040 1024060 648040 1040620 648040 1057180 648040 1073740 648040 
+# END_RING_PT_INFO_LIST 
+# GND 8000 5 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 650070 234720 650070 251280 650070 267840 650070 284400 650070 1011680 650070 1028240 650070 1044800 650070 1061360 
+# END_RING_PT_INFO_LIST 
+# GND 8000 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 234680 648040 251240 648040 267800 648040 284360 648040 1015780 648040 1032340 648040 1048900 648040 1065460 648040 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+# 1 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+

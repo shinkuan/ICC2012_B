@@ -1,0 +1,78 @@
+[09/17 12:24:04      0s] 
+[09/17 12:24:04      0s] Cadence Innovus(TM) Implementation System.
+[09/17 12:24:04      0s] Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/17 12:24:04      0s] 
+[09/17 12:24:04      0s] Version:	v18.11-s100_1, built Mon Sep 17 18:39:52 PDT 2018
+[09/17 12:24:04      0s] Options:	
+[09/17 12:24:04      0s] Date:		Sun Sep 17 12:24:04 2023
+[09/17 12:24:04      0s] Host:		soc07 (x86_64 w/Linux 3.10.0-1062.el7.x86_64) (8cores*32cpus*Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz 11264KB)
+[09/17 12:24:04      0s] OS:		CentOS Linux release 7.7.1908 (Core)
+[09/17 12:24:04      0s] 
+[09/17 12:24:04      0s] License:
+[09/17 12:24:25      0s] 		invs	Innovus Implementation System	18.1	checkout succeeded
+[09/17 12:24:25      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/17 12:24:39     13s] @(#)CDS: Innovus v18.11-s100_1 (64bit) 09/17/2018 18:39 (Linux 2.6.18-194.el5)
+[09/17 12:24:39     13s] @(#)CDS: NanoRoute 18.11-s100_1 NR180819-2237/18_11-UB (database version 2.30, 428.7.1) {superthreading v1.46}
+[09/17 12:24:39     13s] @(#)CDS: AAE 18.11-s042 (64bit) 09/17/2018 (Linux 2.6.18-194.el5)
+[09/17 12:24:39     13s] @(#)CDS: CTE 18.11-s039_1 () Aug 15 2018 09:54:48 ( )
+[09/17 12:24:39     13s] @(#)CDS: SYNTECH 18.11-s016_1 () Aug 15 2018 09:49:01 ( )
+[09/17 12:24:39     13s] @(#)CDS: CPE v18.11-s099
+[09/17 12:24:39     13s] @(#)CDS: IQRC/TQRC 18.1.1-s552 (64bit) Sat May 19 16:19:10 PDT 2018 (Linux 2.6.18-194.el5)
+[09/17 12:24:39     13s] @(#)CDS: OA 22.50-p083 Tue Jan  2 17:02:41 2018
+[09/17 12:24:39     13s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[09/17 12:24:39     13s] @(#)CDS: RCDB 11.14
+[09/17 12:24:39     13s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_139069_soc07_UIS112a03_bUyCCU.
+
+[09/17 12:24:39     13s] Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+[09/17 12:24:41     14s] 
+[09/17 12:24:41     14s] **INFO:  MMMC transition support version v31-84 
+[09/17 12:24:41     14s] 
+[09/17 12:24:41     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/17 12:24:41     14s] <CMD> suppressMessage ENCEXT-2799
+[09/17 12:24:41     14s] <CMD> win
+[09/17 12:26:23     38s] <CMD> set init_gnd_net GND
+[09/17 12:26:23     38s] <CMD> set init_lef_file {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef}
+[09/17 12:26:23     38s] <CMD> set init_verilog ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v
+[09/17 12:26:23     38s] <CMD> set init_mmmc_file Default.view
+[09/17 12:26:23     38s] <CMD> set init_io_file ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/IO_PAD.ioc
+[09/17 12:26:23     38s] <CMD> set init_top_cell CHIP
+[09/17 12:26:23     38s] <CMD> set init_pwr_net VCC
+[09/17 12:26:23     38s] <CMD> init_design
+[09/17 12:26:23     38s] #% Begin Load MMMC data ... (date=09/17 12:26:23, mem=458.8M)
+[09/17 12:26:23     38s] 
+[09/17 12:26:23     38s] Usage: create_analysis_view [-help] -constraint_mode <modeName> -delay_corner <dcCornerObj> -name <viewName>
+[09/17 12:26:23     38s] 
+[09/17 12:26:23     38s] **ERROR: (IMPTCM-46):	Argument "-delay_corner" is required for command "create_analysis_view", either this option is not specified or an option prior to it is not specified correctly.
+**ERROR: (IMPSYT-16089):	Specify the name of Constraint Mode.
+[09/17 12:28:11     51s] <CMD> set init_gnd_net GND
+[09/17 12:28:11     51s] <CMD> set init_lef_file {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef}
+[09/17 12:28:11     51s] <CMD> set init_verilog ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v
+[09/17 12:28:11     51s] <CMD> set init_mmmc_file Default.view
+[09/17 12:28:11     51s] <CMD> set init_io_file ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/IO_PAD.ioc
+[09/17 12:28:11     51s] <CMD> set init_top_cell CHIP
+[09/17 12:28:11     51s] <CMD> set init_pwr_net VCC
+[09/17 12:28:11     51s] <CMD> init_design
+[09/17 12:28:11     51s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[09/17 12:28:11     51s] % Begin Load MMMC data ... (date=09/17 12:28:11, mem=467.5M)
+[09/17 12:28:11     51s] **ERROR: (IMPTCM-46):	Argument "{ { [-library_set] | [-late_library_set -early_library_set ] } [-opcond_library ] [-opcond ] [-rc_corner | [-late_rc_corner -early_rc_corner]] [-irdrop_file ] [-late_opcond_library] [-early_opcond_library ] [-late_opcond] [-early_opcond ] [-late_irdrop_file -early_irdrop_file ] [-temp_file | [-late_temp_file -early_temp_file]] }" is required for command "create_delay_corner", either this option is not specified or an option prior to it is not specified correctly.
+<CMD> win off
+[09/17 12:40:04    175s] ambiguous command name "gui": gui_clear_trace_flightline gui_close_cell_view gui_deselect gui_dim_foreground gui_open_cell_view gui_report_trace_flightline gui_save_flightline gui_select gui_trace_flightline
+[09/17 12:40:07    175s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[09/17 12:40:07    175s] Innovus terminated by user interrupt.
+[09/17 12:40:07    175s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Sun Sep 17 12:40:07 2023
+  Total CPU time:     0:02:55
+  Total real time:    0:16:05
+  Peak memory (main): 476.95MB
+
+[09/17 12:40:07    175s] 
+[09/17 12:40:07    175s] *** Memory Usage v#1 (Current mem = 618.703M, initial mem = 251.605M) ***
+[09/17 12:40:07    175s] 
+[09/17 12:40:07    175s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:40:07    175s] Severity  ID               Count  Summary                                  
+[09/17 12:40:07    175s] ERROR     IMPSYT-16089         2  Specify the name of Constraint Mode.     
+[09/17 12:40:07    175s] ERROR     IMPTCM-46            2  Argument "%s" is required for command "%...
+[09/17 12:40:07    175s] *** Message Summary: 0 warning(s), 4 error(s)
+[09/17 12:40:07    175s] 
+[09/17 12:40:07    175s] --- Ending "Innovus" (totcpu=0:02:56, real=0:16:03, mem=618.7M) ---

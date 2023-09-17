@@ -1,0 +1,757 @@
+[09/17 12:40:08      0s] 
+[09/17 12:40:08      0s] Cadence Innovus(TM) Implementation System.
+[09/17 12:40:08      0s] Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/17 12:40:08      0s] 
+[09/17 12:40:08      0s] Version:	v18.11-s100_1, built Mon Sep 17 18:39:52 PDT 2018
+[09/17 12:40:08      0s] Options:	
+[09/17 12:40:08      0s] Date:		Sun Sep 17 12:40:08 2023
+[09/17 12:40:08      0s] Host:		soc07 (x86_64 w/Linux 3.10.0-1062.el7.x86_64) (8cores*32cpus*Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz 11264KB)
+[09/17 12:40:08      0s] OS:		CentOS Linux release 7.7.1908 (Core)
+[09/17 12:40:08      0s] 
+[09/17 12:40:08      0s] License:
+[09/17 12:40:29      0s] 		invs	Innovus Implementation System	18.1	checkout succeeded
+[09/17 12:40:29      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/17 12:40:44     13s] @(#)CDS: Innovus v18.11-s100_1 (64bit) 09/17/2018 18:39 (Linux 2.6.18-194.el5)
+[09/17 12:40:44     13s] @(#)CDS: NanoRoute 18.11-s100_1 NR180819-2237/18_11-UB (database version 2.30, 428.7.1) {superthreading v1.46}
+[09/17 12:40:44     13s] @(#)CDS: AAE 18.11-s042 (64bit) 09/17/2018 (Linux 2.6.18-194.el5)
+[09/17 12:40:44     13s] @(#)CDS: CTE 18.11-s039_1 () Aug 15 2018 09:54:48 ( )
+[09/17 12:40:44     13s] @(#)CDS: SYNTECH 18.11-s016_1 () Aug 15 2018 09:49:01 ( )
+[09/17 12:40:44     13s] @(#)CDS: CPE v18.11-s099
+[09/17 12:40:44     13s] @(#)CDS: IQRC/TQRC 18.1.1-s552 (64bit) Sat May 19 16:19:10 PDT 2018 (Linux 2.6.18-194.el5)
+[09/17 12:40:44     13s] @(#)CDS: OA 22.50-p083 Tue Jan  2 17:02:41 2018
+[09/17 12:40:44     13s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[09/17 12:40:44     13s] @(#)CDS: RCDB 11.14
+[09/17 12:40:44     13s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_140278_soc07_UIS112a03_LKXtjC.
+
+[09/17 12:40:44     13s] Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+[09/17 12:40:45     14s] 
+[09/17 12:40:45     14s] **INFO:  MMMC transition support version v31-84 
+[09/17 12:40:45     14s] 
+[09/17 12:40:45     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/17 12:40:45     14s] <CMD> suppressMessage ENCEXT-2799
+[09/17 12:40:45     14s] <CMD> win
+[09/17 12:42:59     33s] <CMD> set init_gnd_net GND
+[09/17 12:42:59     33s] <CMD> set init_lef_file {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef}
+[09/17 12:42:59     33s] <CMD> set init_verilog ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v
+[09/17 12:42:59     33s] <CMD> set init_mmmc_file mmmc.view
+[09/17 12:42:59     33s] <CMD> set init_io_file ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/IO_PAD.ioc
+[09/17 12:42:59     33s] <CMD> set init_top_cell CHIP
+[09/17 12:42:59     33s] <CMD> set init_pwr_net VCC
+[09/17 12:42:59     33s] <CMD> init_design
+[09/17 12:42:59     33s] #% Begin Load MMMC data ... (date=09/17 12:42:59, mem=463.3M)
+[09/17 12:42:59     33s] #% End Load MMMC data ... (date=09/17 12:42:59, total cpu=0:00:00.0, real=0:00:00.0, peak res=463.5M, current mem=463.5M)
+[09/17 12:42:59     33s] 
+[09/17 12:42:59     33s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef ...
+[09/17 12:42:59     33s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:42:59     33s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:42:59     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef at line 1290.
+[09/17 12:42:59     33s] 
+[09/17 12:42:59     33s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef ...
+[09/17 12:42:59     33s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[09/17 12:42:59     33s] The LEF parser will ignore this statement.
+[09/17 12:42:59     33s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 1.
+[09/17 12:42:59     33s] Set DBUPerIGU to M2 pitch 620.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 40071.
+[09/17 12:43:00     33s] 
+[09/17 12:43:00     33s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef ...
+[09/17 12:43:00     33s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[09/17 12:43:00     33s] The LEF parser will ignore this statement.
+[09/17 12:43:00     33s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 1.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 2034.
+[09/17 12:43:00     33s] 
+[09/17 12:43:00     33s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef ...
+[09/17 12:43:00     33s] WARNING (LEFPARS-2002): NAMESCASESENSITIVE is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without NAMESCASESENSITIVE defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef at line 123.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef at line 123.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef at line 123.
+[09/17 12:43:00     33s] 
+[09/17 12:43:00     33s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef ...
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-58' for more detail.
+[09/17 12:43:00     33s] **WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+[09/17 12:43:00     33s] To increase the message display limit, refer to the product command reference manual.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[09/17 12:43:00     33s] 
+[09/17 12:43:00     33s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef ...
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-119' for more detail.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef at line 791.
+[09/17 12:43:00     33s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:43:00     33s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:43:00     33s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef at line 791.
+[09/17 12:43:00     33s] **WARN: (IMPLF-61):	392 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data have been ignored.
+[09/17 12:43:00     33s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:43:00     33s] Type 'man IMPLF-61' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'IO' in macro 'ZMA2GSD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'IO' in macro 'ZMA2GSC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'I' in macro 'XMD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'I' in macro 'XMC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'GNDO' in macro 'GNDIOD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'GNDO' in macro 'GNDIOC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:43:00     33s] Type 'man IMPLF-200' for more detail.
+[09/17 12:43:00     33s] 
+[09/17 12:43:00     33s] viaInitial starts at Sun Sep 17 12:43:00 2023
+viaInitial ends at Sun Sep 17 12:43:00 2023
+Loading view definition file from mmmc.view
+[09/17 12:43:00     33s] Reading lib_max timing library '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib' ...
+[09/17 12:43:00     34s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib)
+[09/17 12:43:01     34s] Read 382 cells in library 'fsa0m_a_generic_core_ss1p62v125c' 
+[09/17 12:43:01     34s] Reading lib_max timing library '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib' ...
+[09/17 12:43:01     34s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSC' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[09/17 12:43:01     34s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSD' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[09/17 12:43:01     34s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSC' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[09/17 12:43:01     34s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSD' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib)
+[09/17 12:43:01     34s] Read 6 cells in library 'fsa0m_a_t33_generic_io_ss1p62v125c' 
+[09/17 12:43:01     34s] Reading lib_min timing library '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib' ...
+[09/17 12:43:01     35s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib)
+[09/17 12:43:02     35s] Read 382 cells in library 'fsa0m_a_generic_core_ff1p98vm40c' 
+[09/17 12:43:02     35s] Reading lib_min timing library '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib' ...
+[09/17 12:43:02     35s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSC' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[09/17 12:43:02     35s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'O' of cell 'YA2GSD' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[09/17 12:43:02     35s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSC' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[09/17 12:43:02     35s] **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'IO' of cell 'ZMA2GSD' is not defined in the library. (File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib)
+[09/17 12:43:02     35s] Read 6 cells in library 'fsa0m_a_t33_generic_io_ff1p98vm40c' 
+[09/17 12:43:02     35s] *** End library_loading (cpu=0.03min, real=0.03min, mem=28.6M, fe_cpu=0.59min, fe_real=2.90min, fe_mem=636.5M) ***
+[09/17 12:43:02     35s] #% Begin Load netlist data ... (date=09/17 12:43:02, mem=485.5M)
+[09/17 12:43:02     35s] *** Begin netlist parsing (mem=636.5M) ***
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[09/17 12:43:02     35s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[09/17 12:43:02     35s] To increase the message display limit, refer to the product command reference manual.
+[09/17 12:43:02     35s] Created 388 new cells from 4 timing libraries.
+[09/17 12:43:02     35s] Reading netlist ...
+[09/17 12:43:02     35s] Backslashed names will retain backslash and a trailing blank character.
+[09/17 12:43:02     35s] Reading verilog netlist 'ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v'
+[09/17 12:43:02     35s] 
+[09/17 12:43:02     35s] *** Memory Usage v#1 (Current mem = 636.531M, initial mem = 251.605M) ***
+[09/17 12:43:02     35s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=636.5M) ***
+[09/17 12:43:02     35s] #% End Load netlist data ... (date=09/17 12:43:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=494.5M, current mem=494.5M)
+[09/17 12:43:02     35s] Set top cell to CHIP.
+[09/17 12:43:02     35s] Hooked 776 DB cells to tlib cells.
+[09/17 12:43:02     35s] Starting recursive module instantiation check.
+[09/17 12:43:02     35s] No recursion found.
+[09/17 12:43:02     35s] Building hierarchical netlist for Cell CHIP ...
+[09/17 12:43:02     35s] *** Netlist is unique.
+[09/17 12:43:02     35s] Setting Std. cell height to 5040 DBU (smallest netlist inst).
+[09/17 12:43:02     35s] ** info: there are 839 modules.
+[09/17 12:43:02     35s] ** info: there are 917 stdCell insts.
+[09/17 12:43:02     35s] ** info: there are 33 Pad insts.
+[09/17 12:43:02     35s] 
+[09/17 12:43:02     35s] *** Memory Usage v#1 (Current mem = 674.453M, initial mem = 251.605M) ***
+[09/17 12:43:02     35s] Reading IO assignment file "ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/IO_PAD.ioc" ...
+[09/17 12:43:02     35s] Section 'global' is not supported in this software version, skipped.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A0'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A1'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A2'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A3'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A4'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A5'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A6'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_A7'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B0'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B1'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B2'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B3'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B4'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B5'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B6'.
+[09/17 12:43:02     35s] **WARN: (IMPFP-53):	Failed to find instance 'PAD_IO_F_IO_B7'.
+[09/17 12:43:02     35s] Adjusting Core to Bottom to: 0.4400.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[09/17 12:43:02     35s] Type 'man IMPFP-3961' for more detail.
+[09/17 12:43:02     35s] Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+[09/17 12:43:02     35s] Set Default Net Delay as 1000 ps.
+[09/17 12:43:02     35s] Set Default Net Load as 0.5 pF. 
+[09/17 12:43:02     35s] Set Default Input Pin Transition as 0.1 ps.
+[09/17 12:43:02     35s] Extraction setup Started 
+[09/17 12:43:02     35s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[09/17 12:43:02     35s] **WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+[09/17 12:43:02     35s] Type 'man IMPEXT-6202' for more detail.
+[09/17 12:43:02     35s] Reading Capacitance Table File /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/u18_Faraday.CapTbl ...
+[09/17 12:43:02     35s] Cap table was created using Encounter 13.13-s017_1.
+[09/17 12:43:02     35s] Process name: MIXED_MODE_RFCMOS18_1P6M_MMC_TOP_METAL20_6K.
+[09/17 12:43:02     35s] Importing multi-corner RC tables ... 
+[09/17 12:43:02     35s] Summary of Active RC-Corners : 
+[09/17 12:43:02     35s]  
+[09/17 12:43:02     35s]  Analysis View: av_func_mode_max
+[09/17 12:43:02     35s]     RC-Corner Name        : RC_corner
+[09/17 12:43:02     35s]     RC-Corner Index       : 0
+[09/17 12:43:02     35s]     RC-Corner Temperature : 25 Celsius
+[09/17 12:43:02     35s]     RC-Corner Cap Table   : '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/u18_Faraday.CapTbl'
+[09/17 12:43:02     35s]     RC-Corner PreRoute Res Factor         : 1
+[09/17 12:43:02     35s]     RC-Corner PreRoute Cap Factor         : 1
+[09/17 12:43:02     35s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[09/17 12:43:02     35s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[09/17 12:43:02     35s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[09/17 12:43:02     35s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner Technology file: '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/FireIce/icecaps.tch'
+[09/17 12:43:02     35s]  
+[09/17 12:43:02     35s]  Analysis View: av_func_mode_min
+[09/17 12:43:02     35s]     RC-Corner Name        : RC_corner
+[09/17 12:43:02     35s]     RC-Corner Index       : 0
+[09/17 12:43:02     35s]     RC-Corner Temperature : 25 Celsius
+[09/17 12:43:02     35s]     RC-Corner Cap Table   : '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/u18_Faraday.CapTbl'
+[09/17 12:43:02     35s]     RC-Corner PreRoute Res Factor         : 1
+[09/17 12:43:02     35s]     RC-Corner PreRoute Cap Factor         : 1
+[09/17 12:43:02     35s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[09/17 12:43:02     35s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[09/17 12:43:02     35s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[09/17 12:43:02     35s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[09/17 12:43:02     35s]     RC-Corner Technology file: '/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/FireIce/icecaps.tch'
+[09/17 12:43:02     35s] Updating RC grid for preRoute extraction ...
+[09/17 12:43:02     35s] Initializing multi-corner capacitance tables ... 
+[09/17 12:43:02     35s] Initializing multi-corner resistance tables ...
+[09/17 12:43:02     35s] *Info: initialize multi-corner CTS.
+[09/17 12:43:03     36s] Reading timing constraints file 'ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc' ...
+[09/17 12:43:03     36s] Current (total cpu=0:00:36.2, real=0:02:55, peak res=650.6M, current mem=650.6M)
+[09/17 12:43:03     36s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 35).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 35).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks, ports, or pins' that match '' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 35).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 36).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 36).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 37).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 37).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 38).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 38).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 39).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 39).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 40).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 40).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 41).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 41).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 42).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 42).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 43).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 43).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 44).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 44).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 45).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 45).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 46).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 46).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 47).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 47).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 48).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 48).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 49).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 49).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 50).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 50).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 51).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 51).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 52).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 52).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 53).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 53).
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 54).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] Message <TCLCMD-917> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 54).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] Message <TCLCMD-513> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc, Line 55).
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] INFO (CTE): Reading of timing constraints file ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc completed, with 20 Warnings and 20 Errors.
+[09/17 12:43:03     36s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=668.9M, current mem=668.9M)
+[09/17 12:43:03     36s] Current (total cpu=0:00:36.2, real=0:02:55, peak res=668.9M, current mem=668.9M)
+[09/17 12:43:03     36s] Creating Cell Server ...(0, 1, 1, 1)
+[09/17 12:43:03     36s] Summary for sequential cells identification: 
+[09/17 12:43:03     36s]   Identified SBFF number: 42
+[09/17 12:43:03     36s]   Identified MBFF number: 0
+[09/17 12:43:03     36s]   Identified SB Latch number: 0
+[09/17 12:43:03     36s]   Identified MB Latch number: 0
+[09/17 12:43:03     36s]   Not identified SBFF number: 10
+[09/17 12:43:03     36s]   Not identified MBFF number: 0
+[09/17 12:43:03     36s]   Not identified SB Latch number: 0
+[09/17 12:43:03     36s]   Not identified MB Latch number: 0
+[09/17 12:43:03     36s]   Number of sequential cells which are not FFs: 27
+[09/17 12:43:03     36s] Total number of combinational cells: 290
+[09/17 12:43:03     36s] Total number of sequential cells: 79
+[09/17 12:43:03     36s] Total number of tristate cells: 13
+[09/17 12:43:03     36s] Total number of level shifter cells: 0
+[09/17 12:43:03     36s] Total number of power gating cells: 0
+[09/17 12:43:03     36s] Total number of isolation cells: 0
+[09/17 12:43:03     36s] Total number of power switch cells: 0
+[09/17 12:43:03     36s] Total number of pulse generator cells: 0
+[09/17 12:43:03     36s] Total number of always on buffers: 0
+[09/17 12:43:03     36s] Total number of retention cells: 0
+[09/17 12:43:03     36s] List of usable buffers: BUF1 BUF12CK BUF1S BUF1CK BUF2CK BUF2 BUF3 BUF4 BUF3CK BUF4CK BUF6CK BUF6 BUF8 BUF8CK
+[09/17 12:43:03     36s] Total number of usable buffers: 14
+[09/17 12:43:03     36s] List of unusable buffers:
+[09/17 12:43:03     36s] Total number of unusable buffers: 0
+[09/17 12:43:03     36s] List of usable inverters: INV1 INV12 INV12CK INV1CK INV1S INV2 INV3 INV2CK INV4 INV3CK INV4CK INV6 INV6CK INV8 INV8CK
+[09/17 12:43:03     36s] Total number of usable inverters: 15
+[09/17 12:43:03     36s] List of unusable inverters:
+[09/17 12:43:03     36s] Total number of unusable inverters: 0
+[09/17 12:43:03     36s] List of identified usable delay cells: DELA DELC DELB
+[09/17 12:43:03     36s] Total number of identified usable delay cells: 3
+[09/17 12:43:03     36s] List of identified unusable delay cells:
+[09/17 12:43:03     36s] Total number of identified unusable delay cells: 0
+[09/17 12:43:03     36s] Creating Cell Server, finished. 
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] Deleting Cell Server ...
+[09/17 12:43:03     36s] 
+[09/17 12:43:03     36s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:43:03     36s] Severity  ID               Count  Summary                                  
+[09/17 12:43:03     36s] WARNING   IMPLF-58           392  MACRO '%s' has been found in the databas...
+[09/17 12:43:03     36s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[09/17 12:43:03     36s] WARNING   IMPLF-200            7  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[09/17 12:43:03     36s] WARNING   IMPLF-119           12  LAYER '%s' has been found in the databas...
+[09/17 12:43:03     36s] WARNING   IMPFP-53            16  Failed to find instance '%s'.            
+[09/17 12:43:03     36s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[09/17 12:43:03     36s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[09/17 12:43:03     36s] WARNING   IMPVL-159          764  Pin '%s' of cell '%s' is defined in LEF ...
+[09/17 12:43:03     36s] WARNING   TCLCMD-513          20  The software could not find a matching o...
+[09/17 12:43:03     36s] ERROR     TCLCMD-917          20  Cannot find '%s' that match '%s'         
+[09/17 12:43:03     36s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[09/17 12:43:03     36s] WARNING   TECHLIB-436          8  Attribute '%s' on '%s' pin '%s' of cell ...
+[09/17 12:43:03     36s] *** Message Summary: 1231 warning(s), 20 error(s)
+[09/17 12:43:03     36s] 
+[09/17 12:44:20     46s] <CMD> save_global CHIP.globals
+[09/17 12:47:27     69s] <CMD> selectInst PAD_IOVDD0
+[09/17 12:47:28     69s] <CMD> deselectAll
+[09/17 12:47:28     69s] <CMD> selectInst PAD_I_F_IO_A4
+[09/17 12:47:28     69s] <CMD> deselectAll
+[09/17 12:47:28     69s] <CMD> selectInst PAD_CoreVDD0
+[09/17 12:47:28     69s] <CMD> deselectAll
+[09/17 12:47:28     69s] <CMD> selectInst PAD_I_F_IO_B2
+[09/17 12:47:29     69s] <CMD> deselectAll
+[09/17 12:47:29     69s] <CMD> selectInst PAD_I_F_IO_A7
+[09/17 12:47:33     70s] <CMD> deselectAll
+[09/17 12:47:33     70s] <CMD> selectInst PAD_CoreVSS0
+[09/17 12:47:33     70s] <CMD> deselectAll
+[09/17 12:47:33     70s] <CMD> selectInst PAD_O_done
+[09/17 12:47:33     70s] <CMD> deselectAll
+[09/17 12:47:33     70s] <CMD> selectInst PAD_I_F_IO_B5
+[09/17 12:47:34     70s] <CMD> deselectAll
+[09/17 12:47:34     70s] <CMD> selectInst PAD_IOVSS0
+[09/17 12:47:34     70s] <CMD> deselectAll
+[09/17 12:47:34     70s] <CMD> selectInst PAD_O_F_ALE_B
+[09/17 12:47:35     70s] <CMD> deselectAll
+[09/17 12:47:35     70s] <CMD> selectInst PAD_O_F_REN_A
+[09/17 12:47:46     71s] <CMD> deselectAll
+[09/17 12:47:46     71s] <CMD> selectInst PAD_I_clk
+[09/17 12:47:46     72s] <CMD> deselectAll
+[09/17 12:47:46     72s] <CMD> selectInst PAD_I_rst
+[09/17 12:47:47     72s] <CMD> deselectAll
+[09/17 12:47:47     72s] <CMD> selectInst PAD_I_F_RB_A
+[09/17 12:47:47     72s] <CMD> deselectAll
+[09/17 12:47:47     72s] <CMD> selectInst PAD_I_F_RB_B
+[09/17 12:47:52     72s] <CMD> deselectAll
+[09/17 12:47:52     72s] <CMD> selectInst PAD_IOVDD1
+[09/17 12:47:52     72s] <CMD> deselectAll
+[09/17 12:47:52     72s] <CMD> selectInst PAD_CoreVDD1
+[09/17 12:48:19     76s] <CMD> deselectAll
+[09/17 12:48:19     76s] <CMD> selectInst PAD_IOVDD0
+[09/17 12:48:20     76s] <CMD> deselectAll
+[09/17 12:48:20     76s] <CMD> selectInst PAD_I_F_IO_A4
+[09/17 12:48:20     76s] <CMD> deselectAll
+[09/17 12:48:20     76s] <CMD> selectInst PAD_CoreVDD0
+[09/17 12:48:21     76s] <CMD> deselectAll
+[09/17 12:48:21     76s] <CMD> selectInst PAD_I_F_IO_B2
+[09/17 12:48:23     76s] <CMD> deselectAll
+[09/17 12:48:23     76s] <CMD> selectInst PAD_I_F_IO_A7
+[09/17 12:48:23     76s] <CMD> deselectAll
+[09/17 12:48:23     76s] <CMD> selectInst PAD_CoreVSS0
+[09/17 12:48:24     76s] <CMD> deselectAll
+[09/17 12:48:24     76s] <CMD> selectInst PAD_O_done
+[09/17 12:48:24     76s] <CMD> deselectAll
+[09/17 12:48:24     76s] <CMD> selectInst PAD_I_F_IO_B5
+[09/17 12:48:25     77s] <CMD> deselectAll
+[09/17 12:48:25     77s] <CMD> selectInst PAD_IOVSS0
+[09/17 12:48:26     77s] <CMD> deselectAll
+[09/17 12:48:26     77s] <CMD> selectInst PAD_O_F_ALE_B
+[09/17 12:48:26     77s] <CMD> deselectAll
+[09/17 12:48:26     77s] <CMD> selectInst PAD_O_F_REN_A
+[09/17 12:49:14     82s] <CMD> deselectAll
+[09/17 12:49:14     82s] <CMD> selectInst PAD_CoreVDD0
+[09/17 12:49:17     83s] <CMD> gui_select -rect {300.85100 962.29800 226.28200 964.78400}
+[09/17 12:49:18     83s] <CMD> deselectAll
+[09/17 12:49:18     83s] <CMD> selectInst PAD_CoreVDD0
+[09/17 12:50:50     96s] <CMD> deselectAll
+[09/17 12:50:54     96s] <CMD> selectInst PAD_O_F_CLE_B
+[09/17 12:51:50    104s] <CMD> deselectAll
+[09/17 12:53:15    115s] <CMD> init_design
+[09/17 12:53:15    115s] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[09/17 12:53:15    115s] 
+[09/17 12:53:15    115s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:53:15    115s] Severity  ID               Count  Summary                                  
+[09/17 12:53:15    115s] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[09/17 12:53:15    115s] *** Message Summary: 1 warning(s), 0 error(s)
+[09/17 12:53:15    115s] 
+[09/17 12:53:20    116s] <CMD> init_design
+[09/17 12:53:20    116s] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[09/17 12:53:20    116s] 
+[09/17 12:53:20    116s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:53:20    116s] Severity  ID               Count  Summary                                  
+[09/17 12:53:20    116s] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[09/17 12:53:20    116s] *** Message Summary: 1 warning(s), 0 error(s)
+[09/17 12:53:20    116s] 
+[09/17 12:53:21    116s] <CMD> selectInst PAD_O_F_CLE_B
+[09/17 12:53:22    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:23    116s] <CMD> deselectAll
+[09/17 12:53:23    116s] <CMD> selectInst PAD_O_F_ALE_B
+[09/17 12:53:23    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:23    116s] <CMD> deselectAll
+[09/17 12:53:23    116s] <CMD> selectInst PAD_CoreVSS0
+[09/17 12:53:23    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:24    116s] <CMD> deselectAll
+[09/17 12:53:24    116s] <CMD> selectInst PAD_I_F_IO_B2
+[09/17 12:53:24    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:24    116s] <CMD> deselectAll
+[09/17 12:53:24    116s] <CMD> selectInst PAD_I_F_IO_A4
+[09/17 12:53:24    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:25    116s] <CMD> deselectAll
+[09/17 12:53:25    116s] <CMD> selectInst PAD_IOVDD0
+[09/17 12:53:25    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:25    116s] <CMD> deselectAll
+[09/17 12:53:25    116s] <CMD> selectInst PAD_CoreVDD0
+[09/17 12:53:25    116s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:27    117s] <CMD> deselectAll
+[09/17 12:53:28    117s] <CMD> selectInst PAD_I_F_IO_A7
+[09/17 12:53:28    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:29    117s] <CMD> deselectAll
+[09/17 12:53:29    117s] <CMD> selectInst PAD_O_done
+[09/17 12:53:29    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:30    117s] <CMD> deselectAll
+[09/17 12:53:30    117s] <CMD> selectInst PAD_I_F_IO_B5
+[09/17 12:53:30    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:30    117s] <CMD> deselectAll
+[09/17 12:53:30    117s] <CMD> selectInst PAD_IOVSS0
+[09/17 12:53:30    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:32    117s] <CMD> deselectAll
+[09/17 12:53:32    117s] <CMD> selectInst PAD_O_F_REN_A
+[09/17 12:53:32    117s] <CMD> deselectAll
+[09/17 12:53:32    117s] <CMD> selectInst PAD_O_F_REN_A
+[09/17 12:53:33    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:33    117s] <CMD> deselectAll
+[09/17 12:53:33    117s] <CMD> selectInst PAD_O_F_WEN_B
+[09/17 12:53:34    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:34    117s] <CMD> deselectAll
+[09/17 12:53:34    117s] <CMD> selectInst PAD_I_F_IO_B7
+[09/17 12:53:34    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:35    117s] <CMD> deselectAll
+[09/17 12:53:35    117s] <CMD> selectInst PAD_O_F_ALE_A
+[09/17 12:53:35    117s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:36    118s] <CMD> deselectAll
+[09/17 12:53:36    118s] <CMD> selectInst PAD_I_F_IO_B1
+[09/17 12:53:36    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:36    118s] <CMD> deselectAll
+[09/17 12:53:36    118s] <CMD> selectInst PAD_I_F_IO_B4
+[09/17 12:53:37    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:37    118s] <CMD> deselectAll
+[09/17 12:53:37    118s] <CMD> selectInst PAD_I_F_IO_A3
+[09/17 12:53:37    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:38    118s] <CMD> deselectAll
+[09/17 12:53:38    118s] <CMD> selectInst PAD_I_F_IO_A6
+[09/17 12:53:38    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:38    118s] <CMD> deselectAll
+[09/17 12:53:38    118s] <CMD> selectInst PAD_I_F_IO_A1
+[09/17 12:53:38    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:39    118s] <CMD> deselectAll
+[09/17 12:53:39    118s] <CMD> selectInst PAD_I_F_IO_A2
+[09/17 12:53:39    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:40    118s] <CMD> deselectAll
+[09/17 12:53:40    118s] <CMD> selectInst PAD_I_F_IO_A0
+[09/17 12:53:40    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:40    118s] <CMD> deselectAll
+[09/17 12:53:41    118s] <CMD> selectInst PAD_O_F_WEN_A
+[09/17 12:53:41    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:41    118s] <CMD> deselectAll
+[09/17 12:53:41    118s] <CMD> selectInst PAD_O_F_REN_B
+[09/17 12:53:42    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:42    118s] <CMD> deselectAll
+[09/17 12:53:42    118s] <CMD> selectInst PAD_IOVSS2
+[09/17 12:53:42    118s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:44    119s] <CMD> deselectAll
+[09/17 12:53:44    119s] <CMD> selectInst PAD_I_F_IO_B6
+[09/17 12:53:44    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:45    119s] <CMD> deselectAll
+[09/17 12:53:45    119s] <CMD> selectInst PAD_O_F_CLE_A
+[09/17 12:53:45    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:45    119s] <CMD> deselectAll
+[09/17 12:53:45    119s] <CMD> selectInst PAD_CoreVSS2
+[09/17 12:53:46    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:46    119s] <CMD> deselectAll
+[09/17 12:53:46    119s] <CMD> selectInst PAD_I_F_IO_B0
+[09/17 12:53:46    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:46    119s] <CMD> deselectAll
+[09/17 12:53:46    119s] <CMD> selectInst PAD_I_F_IO_B3
+[09/17 12:53:47    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:47    119s] <CMD> deselectAll
+[09/17 12:53:47    119s] <CMD> selectInst PAD_CoreVDD2
+[09/17 12:53:48    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:48    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:48    119s] <CMD> deselectAll
+[09/17 12:53:48    119s] <CMD> selectInst PAD_I_F_IO_A5
+[09/17 12:53:49    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:49    119s] <CMD> deselectAll
+[09/17 12:53:49    119s] <CMD> selectInst PAD_IOVDD2
+[09/17 12:53:49    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:50    119s] <CMD> deselectAll
+[09/17 12:53:50    119s] <CMD> selectInst PAD_IOVDD1
+[09/17 12:53:50    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:51    119s] <CMD> deselectAll
+[09/17 12:53:51    119s] <CMD> selectInst PAD_CoreVDD1
+[09/17 12:53:51    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:52    119s] <CMD> deselectAll
+[09/17 12:53:52    119s] <CMD> selectInst PAD_I_KEY0
+[09/17 12:53:52    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:52    119s] <CMD> deselectAll
+[09/17 12:53:52    119s] <CMD> selectInst PAD_I_KEY1
+[09/17 12:53:53    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:53    119s] <CMD> deselectAll
+[09/17 12:53:53    119s] <CMD> selectInst PAD_I_KEY2
+[09/17 12:53:53    119s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:54    119s] <CMD> deselectAll
+[09/17 12:53:54    119s] <CMD> selectInst PAD_I_KEY3
+[09/17 12:53:54    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:54    120s] <CMD> deselectAll
+[09/17 12:53:54    120s] <CMD> selectInst PAD_I_clk
+[09/17 12:53:56    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:56    120s] <CMD> deselectAll
+[09/17 12:53:56    120s] <CMD> selectInst PAD_I_rst
+[09/17 12:53:56    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:56    120s] <CMD> deselectAll
+[09/17 12:53:56    120s] <CMD> selectInst PAD_I_F_RB_A
+[09/17 12:53:57    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:57    120s] <CMD> deselectAll
+[09/17 12:53:57    120s] <CMD> selectInst PAD_I_F_RB_B
+[09/17 12:53:57    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:58    120s] <CMD> deselectAll
+[09/17 12:53:58    120s] <CMD> selectInst PAD_CoreVSS1
+[09/17 12:53:58    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:53:59    120s] <CMD> deselectAll
+[09/17 12:53:59    120s] <CMD> selectInst PAD_IOVSS1
+[09/17 12:53:59    120s] <CMD> deleteSelectedFromFPlan
+[09/17 12:54:04    120s] <CMD> init_design
+[09/17 12:54:04    120s] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[09/17 12:54:04    120s] 
+[09/17 12:54:04    120s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:54:04    120s] Severity  ID               Count  Summary                                  
+[09/17 12:54:04    120s] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[09/17 12:54:04    120s] *** Message Summary: 1 warning(s), 0 error(s)
+[09/17 12:54:04    120s] 
+[09/17 12:54:16    122s] <CMD> init_design
+[09/17 12:54:16    122s] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[09/17 12:54:16    122s] 
+[09/17 12:54:16    122s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:54:16    122s] Severity  ID               Count  Summary                                  
+[09/17 12:54:16    122s] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[09/17 12:54:16    122s] *** Message Summary: 1 warning(s), 0 error(s)
+[09/17 12:54:16    122s] 
+[09/17 12:54:17    122s] <CMD> deselectAll
+[09/17 12:54:50    126s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Sun Sep 17 12:54:50 2023
+  Total CPU time:     0:02:07
+  Total real time:    0:14:43
+  Peak memory (main): 746.51MB
+
+[09/17 12:54:50    126s] 
+[09/17 12:54:50    126s] *** Memory Usage v#1 (Current mem = 913.387M, initial mem = 251.605M) ***
+[09/17 12:54:50    126s] 
+[09/17 12:54:50    126s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:54:50    126s] Severity  ID               Count  Summary                                  
+[09/17 12:54:50    126s] WARNING   IMPLF-58           392  MACRO '%s' has been found in the databas...
+[09/17 12:54:50    126s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[09/17 12:54:50    126s] WARNING   IMPLF-200            7  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[09/17 12:54:50    126s] WARNING   IMPLF-119           12  LAYER '%s' has been found in the databas...
+[09/17 12:54:50    126s] WARNING   IMPFP-53            16  Failed to find instance '%s'.            
+[09/17 12:54:50    126s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[09/17 12:54:50    126s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[09/17 12:54:50    126s] WARNING   IMPSYT-7329          4  Cannot load design with init_design, aft...
+[09/17 12:54:50    126s] WARNING   IMPVL-159          764  Pin '%s' of cell '%s' is defined in LEF ...
+[09/17 12:54:50    126s] WARNING   TCLCMD-513          20  The software could not find a matching o...
+[09/17 12:54:50    126s] ERROR     TCLCMD-917          20  Cannot find '%s' that match '%s'         
+[09/17 12:54:50    126s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[09/17 12:54:50    126s] WARNING   TECHLIB-436          8  Attribute '%s' on '%s' pin '%s' of cell ...
+[09/17 12:54:50    126s] *** Message Summary: 1235 warning(s), 20 error(s)
+[09/17 12:54:50    126s] 
+[09/17 12:54:50    126s] --- Ending "Innovus" (totcpu=0:02:07, real=0:14:42, mem=913.4M) ---

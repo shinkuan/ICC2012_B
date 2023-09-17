@@ -1,0 +1,240 @@
+[09/17 12:05:05      0s] 
+[09/17 12:05:05      0s] Cadence Innovus(TM) Implementation System.
+[09/17 12:05:05      0s] Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/17 12:05:05      0s] 
+[09/17 12:05:05      0s] Version:	v18.11-s100_1, built Mon Sep 17 18:39:52 PDT 2018
+[09/17 12:05:05      0s] Options:	
+[09/17 12:05:05      0s] Date:		Sun Sep 17 12:05:05 2023
+[09/17 12:05:05      0s] Host:		soc07 (x86_64 w/Linux 3.10.0-1062.el7.x86_64) (8cores*32cpus*Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz 11264KB)
+[09/17 12:05:05      0s] OS:		CentOS Linux release 7.7.1908 (Core)
+[09/17 12:05:05      0s] 
+[09/17 12:05:05      0s] License:
+[09/17 12:05:25      0s] 		invs	Innovus Implementation System	18.1	checkout succeeded
+[09/17 12:05:25      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/17 12:05:40     13s] @(#)CDS: Innovus v18.11-s100_1 (64bit) 09/17/2018 18:39 (Linux 2.6.18-194.el5)
+[09/17 12:05:40     13s] @(#)CDS: NanoRoute 18.11-s100_1 NR180819-2237/18_11-UB (database version 2.30, 428.7.1) {superthreading v1.46}
+[09/17 12:05:40     13s] @(#)CDS: AAE 18.11-s042 (64bit) 09/17/2018 (Linux 2.6.18-194.el5)
+[09/17 12:05:40     13s] @(#)CDS: CTE 18.11-s039_1 () Aug 15 2018 09:54:48 ( )
+[09/17 12:05:40     13s] @(#)CDS: SYNTECH 18.11-s016_1 () Aug 15 2018 09:49:01 ( )
+[09/17 12:05:40     13s] @(#)CDS: CPE v18.11-s099
+[09/17 12:05:40     13s] @(#)CDS: IQRC/TQRC 18.1.1-s552 (64bit) Sat May 19 16:19:10 PDT 2018 (Linux 2.6.18-194.el5)
+[09/17 12:05:40     13s] @(#)CDS: OA 22.50-p083 Tue Jan  2 17:02:41 2018
+[09/17 12:05:40     13s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[09/17 12:05:40     13s] @(#)CDS: RCDB 11.14
+[09/17 12:05:40     13s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_137585_soc07_UIS112a03_Ti7Bz0.
+
+[09/17 12:05:40     13s] Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+[09/17 12:05:41     13s] 
+[09/17 12:05:41     13s] **INFO:  MMMC transition support version v31-84 
+[09/17 12:05:41     13s] 
+[09/17 12:05:41     13s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/17 12:05:41     13s] <CMD> suppressMessage ENCEXT-2799
+[09/17 12:05:41     13s] <CMD> win
+[09/17 12:07:05     26s] <CMD> set init_gnd_net GND
+[09/17 12:07:05     26s] <CMD> set init_lef_file {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef}
+[09/17 12:07:05     26s] <CMD> set init_verilog ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v
+[09/17 12:07:05     26s] <CMD> set init_mmmc_file Default.view
+[09/17 12:07:05     26s] <CMD> set init_io_file ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/IO_PAD.ioc
+[09/17 12:07:05     26s] <CMD> set init_top_cell CHIP
+[09/17 12:07:05     26s] <CMD> set init_pwr_net VCC
+[09/17 12:07:05     26s] <CMD> init_design
+[09/17 12:07:05     26s] #% Begin Load MMMC data ... (date=09/17 12:07:05, mem=457.3M)
+[09/17 12:07:05     26s] #% End Load MMMC data ... (date=09/17 12:07:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=457.3M, current mem=457.3M)
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef ...
+[09/17 12:07:06     26s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef at line 1290.
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef ...
+[09/17 12:07:06     26s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[09/17 12:07:06     26s] The LEF parser will ignore this statement.
+[09/17 12:07:06     26s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 1.
+[09/17 12:07:06     26s] Set DBUPerIGU to M2 pitch 620.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 40071.
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef ...
+[09/17 12:07:06     26s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[09/17 12:07:06     26s] The LEF parser will ignore this statement.
+[09/17 12:07:06     26s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 1.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 2034.
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef ...
+[09/17 12:07:06     26s] WARNING (LEFPARS-2002): NAMESCASESENSITIVE is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without NAMESCASESENSITIVE defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef at line 123.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef at line 123.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef at line 123.
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef ...
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-58' for more detail.
+[09/17 12:07:06     26s] **WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+[09/17 12:07:06     26s] To increase the message display limit, refer to the product command reference manual.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] Loading LEF file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef ...
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-119' for more detail.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef at line 791.
+[09/17 12:07:06     26s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[09/17 12:07:06     26s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[09/17 12:07:06     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef at line 791.
+[09/17 12:07:06     26s] **WARN: (IMPLF-61):	392 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data have been ignored.
+[09/17 12:07:06     26s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[09/17 12:07:06     26s] Type 'man IMPLF-61' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'IO' in macro 'ZMA2GSD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'IO' in macro 'ZMA2GSC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'I' in macro 'XMD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'I' in macro 'XMC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'GNDO' in macro 'GNDIOD' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'GNDO' in macro 'GNDIOC' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/17 12:07:06     26s] Type 'man IMPLF-200' for more detail.
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] viaInitial starts at Sun Sep 17 12:07:06 2023
+viaInitial ends at Sun Sep 17 12:07:06 2023
+Loading view definition file from Default.view
+[09/17 12:07:06     26s] *** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.44min, fe_real=2.02min, fe_mem=610.5M) ***
+[09/17 12:07:06     26s] #% Begin Load netlist data ... (date=09/17 12:07:06, mem=465.2M)
+[09/17 12:07:06     26s] *** Begin netlist parsing (mem=610.5M) ***
+[09/17 12:07:06     26s] Created 0 new cells from 0 timing libraries.
+[09/17 12:07:06     26s] Reading netlist ...
+[09/17 12:07:06     26s] Backslashed names will retain backslash and a trailing blank character.
+[09/17 12:07:06     26s] Reading verilog netlist 'ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v'
+[09/17 12:07:06     26s] 
+[09/17 12:07:06     26s] *** Memory Usage v#1 (Current mem = 614.461M, initial mem = 259.605M) ***
+[09/17 12:07:06     26s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=614.5M) ***
+[09/17 12:07:06     26s] #% End Load netlist data ... (date=09/17 12:07:06, total cpu=0:00:00.0, real=0:00:00.0, peak res=469.2M, current mem=469.2M)
+[09/17 12:07:06     26s] **ERROR: (IMPSYC-300):	Cell CHIP not found.
+**ERROR: (IMPVL-904):	Can't set top cell to "CHIP" because it does not exist.  Exiting!
+[09/17 12:07:13     29s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Sun Sep 17 12:07:13 2023
+  Total CPU time:     0:00:29
+  Total real time:    0:02:09
+  Peak memory (main): 469.89MB
+
+[09/17 12:07:13     29s] 
+[09/17 12:07:13     29s] *** Memory Usage v#1 (Current mem = 615.469M, initial mem = 259.605M) ***
+[09/17 12:07:13     29s] 
+[09/17 12:07:13     29s] *** Summary of all messages that are not suppressed in this session:
+[09/17 12:07:13     29s] Severity  ID               Count  Summary                                  
+[09/17 12:07:13     29s] WARNING   IMPLF-58           392  MACRO '%s' has been found in the databas...
+[09/17 12:07:13     29s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[09/17 12:07:13     29s] WARNING   IMPLF-200            7  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[09/17 12:07:13     29s] WARNING   IMPLF-119           12  LAYER '%s' has been found in the databas...
+[09/17 12:07:13     29s] ERROR     IMPSYC-300           1  Cell %s not found.                       
+[09/17 12:07:13     29s] ERROR     IMPVL-904            2  Can't set top cell to "%s" because it do...
+[09/17 12:07:13     29s] *** Message Summary: 412 warning(s), 3 error(s)
+[09/17 12:07:13     29s] 
+[09/17 12:07:13     29s] --- Ending "Innovus" (totcpu=0:00:29.0, real=0:02:08, mem=615.5M) ---

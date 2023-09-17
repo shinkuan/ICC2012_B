@@ -1,0 +1,11 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_rc_corner -name RC_corner -cap_table {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/u18_Faraday.CapTbl} -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/FireIce/icecaps.tch}
+create_library_set -name lib_max -timing {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lib/fsa0m_a_generic_core_ss1p62v125c.lib /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lib/fsa0m_a_t33_generic_io_ss1p62v125c.lib} -si {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/celtic/u18_ss.cdb}
+create_library_set -name lib_min -timing {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lib/fsa0m_a_generic_core_ff1p98vm40c.lib /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lib/fsa0m_a_t33_generic_io_ff1p98vm40c.lib} -si {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/celtic/u18_ff.cdb}
+create_constraint_mode -name func_mode -sdc_files {ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.sdc}
+create_delay_corner -name Delay_Corner_max -library_set {lib_max} -rc_corner {RC_corner}
+create_delay_corner -name Delay_Corner_min -library_set {lib_min} -rc_corner {RC_corner}
+create_analysis_view -name av_func_mode_max -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+create_analysis_view -name av_func_mode_min -constraint_mode {func_mode} -delay_corner {Delay_Corner_min}
+set_analysis_view -setup {av_func_mode_max} -hold {av_func_mode_min}

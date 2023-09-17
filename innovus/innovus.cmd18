@@ -1,0 +1,85 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sun Sep 17 15:31:21 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v18.11-s100_1 (64bit) 09/17/2018 18:39 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 18.11-s100_1 NR180819-2237/18_11-UB (database version 2.30, 428.7.1) {superthreading v1.46}
+#@(#)CDS: AAE 18.11-s042 (64bit) 09/17/2018 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 18.11-s039_1 () Aug 15 2018 09:54:48 ( )
+#@(#)CDS: SYNTECH 18.11-s016_1 () Aug 15 2018 09:49:01 ( )
+#@(#)CDS: CPE v18.11-s099
+#@(#)CDS: IQRC/TQRC 18.1.1-s552 (64bit) Sat May 19 16:19:10 PDT 2018 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+set dcgHonorSignalNetNDR 1
+set defHierChar /
+set delaycal_input_transition_delay 0.1ps
+set distributed_client_message_echo 1
+set distributed_mmmc_disable_reports_auto_redirection 0
+set enc_enable_print_mode_command_reset_options 1
+set floorplan_default_site core_5040
+set fpIsMaxIoHeight 0
+set init_gnd_net GND
+set init_io_file ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/IO_PAD.ioc
+set init_lef_file {/mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/header6_V55_20ka_cic.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_generic_core.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/BONDPAD.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef /mnt4/CBDK018_UMC_Faraday_v1.1_all/CBDK018_UMC_Faraday_v1.1/CIC/SOCE/lef/FSA0M_A_T33_GENERIC_IO_ANT_V55.lef}
+set init_mmmc_file mmmc.view
+set init_oa_search_lib {}
+set init_original_verilog_files ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v
+set init_pwr_net VCC
+set init_top_cell CHIP
+set init_verilog ICC2012_B/B_ICC2012_preliminary_all_cell/Report_U18/NFC_syn.v
+set latch_time_borrow_mode max_borrow
+set pegDefaultResScaleFactor 1
+set pegDetailResScaleFactor 1
+set report_inactive_arcs_format {from to when arc_type sense reason}
+set soft_stack_size_limit 30
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+suppressMessage -silent GLOBAL-100
+unsuppressMessage -silent GLOBAL-100
+set timing_enable_default_delay_arc 1
+init_design
+clearGlobalNets
+globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+gui_select -next -point {48.409 889.626}
+saveDesign Layout/init
+setDesignMode -process 180
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site core_5040 -d 1300 1300 150 150 150 150
+uiSetTool select
+getIoFlowFlag
+fit
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -prePlace -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_prePlace -outDir timingReports
+saveDesign Layout/floorplan
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VCC GND} -type core_rings -follow core -layer {top metal5 bottom metal5 left metal4 right metal4} -width {top 8 bottom 8 left 8 right 8} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 4 -use_interleaving_wire_group 1
+saveDesign Layout/powerplan_ring
+setSrouteMode -viaConnectToShape { ring }
+sroute -connect { padPin } -layerChangeRange { metal1(1) metal5(5) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal5(5) } -nets { GND VCC } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal5(5) }

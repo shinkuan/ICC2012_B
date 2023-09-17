@@ -1,0 +1,6 @@
+Gate area 9.3744 um^2
+Level 0 Module CHIP                                     Gates=      1855 Cells=     888 Area=   17389.5 um^2
+Level 1 Module NFC_CHIP                                 Gates=1851       Cells=884      Area=   17352.0 um^2
+Level 2 Module NFC_CHIP/OriNFC_A                        Gates=579        Cells=274      Area=    5427.8 um^2
+Level 2 Module NFC_CHIP/OriNFC_B                        Gates=579        Cells=274      Area=    5427.8 um^2
+Level 2 Module NFC_CHIP/OriNFC_C                        Gates=579        Cells=274      Area=    5427.8 um^2

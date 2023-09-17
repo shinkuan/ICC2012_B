@@ -1,0 +1,53 @@
+#cell                      cntr-x     cntr_y  bond_width side   row  iotype
+#south side
+PAD_IOVDD2                 192.090   -28.460       52   south  outer  IOPwr
+PAD_I_F_IO_B0              275.360   -28.460       52   south  outer      I
+PAD_I_F_IO_B1              358.630   -28.460       52   south  outer      I
+PAD_I_F_IO_B2              441.900   -28.460       52   south  outer      I
+PAD_I_F_IO_B3              525.170   -28.460       52   south  outer      I
+PAD_CoreVDD2               608.440   -28.460       52   south  outer   CPwr
+PAD_CoreVSS2               691.710   -28.460       52   south  outer   CGnd
+PAD_I_F_IO_B4              774.980   -28.460       52   south  outer      I
+PAD_I_F_IO_B5              858.250   -28.460       52   south  outer      I
+PAD_I_F_IO_B6              941.520   -28.460       52   south  outer      I
+PAD_I_F_IO_B7             1024.790   -28.460       52   south  outer      I
+PAD_IOVSS2                1108.060   -28.460       52   south  outer  IOGnd
+#east side
+PAD_O_done                1328.600   192.060       52    east  outer      O
+PAD_O_F_CLE_A             1328.600   275.300       52    east  outer      O
+PAD_O_F_ALE_A             1328.600   358.540       52    east  outer      O
+PAD_O_F_REN_A             1328.600   441.780       52    east  outer      O
+PAD_O_F_WEN_A             1328.600   525.020       52    east  outer      O
+PAD_CoreVDD3              1328.600   608.260       52    east  outer   CPwr
+PAD_CoreVSS3              1328.600   691.500       52    east  outer   CGnd
+PAD_O_F_CLE_B             1328.600   774.740       52    east  outer      O
+PAD_O_F_ALE_B             1328.600   857.980       52    east  outer      O
+PAD_O_F_REN_B             1328.600   941.220       52    east  outer      O
+PAD_O_F_WEN_B             1328.600  1024.460       52    east  outer      O
+PAD_IOVSS3                1328.600  1107.700       52    east  outer  IOGnd
+#north side
+PAD_IOVSS0                1108.060  1328.220       52   north  outer  IOGnd
+PAD_I_F_IO_A7             1024.790  1328.220       52   north  outer      I
+PAD_I_F_IO_A6              941.520  1328.220       52   north  outer      I
+PAD_I_F_IO_A5              858.250  1328.220       52   north  outer      I
+PAD_I_F_IO_A4              774.980  1328.220       52   north  outer      I
+PAD_CoreVSS0               691.710  1328.220       52   north  outer   CGnd
+PAD_CoreVDD0               608.440  1328.220       52   north  outer   CPwr
+PAD_I_F_IO_A3              525.170  1328.220       52   north  outer      I
+PAD_I_F_IO_A2              441.900  1328.220       52   north  outer      I
+PAD_I_F_IO_A1              358.630  1328.220       52   north  outer      I
+PAD_I_F_IO_A0              275.360  1328.220       52   north  outer      I
+PAD_IOVDD0                 192.090  1328.220       52   north  outer  IOPwr
+#west side
+PAD_IOVSS1                 -28.460  1107.700       52    west  outer  IOGnd
+PAD_I_F_RB_B               -28.460  1024.460       52    west  outer      I
+PAD_I_F_RB_A               -28.460   941.220       52    west  outer      I
+PAD_I_rst                  -28.460   857.980       52    west  outer      I
+PAD_I_clk                  -28.460   774.740       52    west  outer      I
+PAD_CoreVSS1               -28.460   691.500       52    west  outer   CGnd
+PAD_CoreVDD1               -28.460   608.260       52    west  outer   CPwr
+PAD_I_KEY3                 -28.460   525.020       52    west  outer      I
+PAD_I_KEY2                 -28.460   441.780       52    west  outer      I
+PAD_I_KEY1                 -28.460   358.540       52    west  outer      I
+PAD_I_KEY0                 -28.460   275.300       52    west  outer      I
+PAD_IOVDD1                 -28.460   192.060       52    west  outer  IOPwr

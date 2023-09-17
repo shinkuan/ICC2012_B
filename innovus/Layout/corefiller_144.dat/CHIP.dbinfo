@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+    <usage version="1.0.0">
+        <desc>Miscellaneous information</desc>
+    </usage>
+    <tool>
+        <name>Innovus</name>
+        <version>18.11-s100_1</version>
+    </tool>
+    <design>
+        <name>CHIP</name>
+        <timestamp>Sun Sep 17 16:28:20 2023</timestamp>
+    </design>
+    <os>
+        <name>Linux</name>
+        <arch>x86_64</arch>
+        <host>soc07</host>
+        <user>UIS112a03</user>
+    </os>
+</content>
