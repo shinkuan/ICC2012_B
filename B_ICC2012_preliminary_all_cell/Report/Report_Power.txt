@@ -4,13 +4,13 @@ Report : power
         -analysis_effort low
 Design : NFC
 Version: P-2019.03
-Date   : Sat Jul 15 15:33:23 2023
+Date   : Thu Sep  7 01:04:46 2023
 ****************************************
 
 
 Library(s) Used:
 
-    slow (File: /mnt3/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+    slow (File: /mnt4/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
 
 
 Operating Conditions: slow   Library: slow
@@ -26,12 +26,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  28.5680 uW   (95%)
-  Net Switching Power  =   1.3966 uW    (5%)
+  Cell Internal Power  =  38.7981 uW   (94%)
+  Net Switching Power  =   2.3279 uW    (6%)
                          ---------
-Total Dynamic Power    =  29.9647 uW  (100%)
+Total Dynamic Power    =  41.1260 uW  (100%)
 
-Cell Leakage Power     =   1.2140 uW
+Cell Leakage Power     =   1.9823 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -41,9 +41,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register       2.7595e-02        3.4314e-04        5.7226e+05        2.8511e-02  (  91.44%)
+register       3.7083e-02        6.0859e-04        8.0941e+05        3.8501e-02  (  89.31%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  9.7266e-04        1.0535e-03        6.4174e+05        2.6679e-03  (   8.56%)
+combinational  1.7150e-03        1.7193e-03        1.1729e+06        4.6072e-03  (  10.69%)
 --------------------------------------------------------------------------------------------------
-Total          2.8568e-02 mW     1.3966e-03 mW     1.2140e+06 pW     3.1179e-02 mW
+Total          3.8798e-02 mW     2.3279e-03 mW     1.9823e+06 pW     4.3108e-02 mW
 1
